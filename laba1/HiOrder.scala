@@ -19,5 +19,5 @@ object HigherOrder {
    *          if (a > b) a else b
    */
   def a = (a: Int, b: Int) => if (a > b) a else b
-  def testAnonymousNTimes(a: Int, b: Int, n: Int): Int = a
+  def testAnonymousNTimes(a: Int, b: Int, n: Int): Int = a(a, b)
 }
