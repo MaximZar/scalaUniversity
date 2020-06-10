@@ -35,6 +35,3 @@ class Animal(name: String, food: String) {
     def apply(food: String): Option[Food] = Some.apply(Food.this)
   }
 }
-
-
-
