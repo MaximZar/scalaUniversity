@@ -3,6 +3,7 @@ package laba2
 import org.scalatest.FunSuite
 
 class Laba2Tests extends FunSuite {
+// RecursiveData.scala
     test("RecursiveData.scala testListIntEmpty") {
         val list = Nil[Int]()
         val testListIntEmpty = RecursiveData.testListIntEmpty(list)
@@ -18,6 +19,7 @@ class Laba2Tests extends FunSuite {
     }
 
 
+// RecursiveFunc.scala
     test("RecursiveFunc.scala testReverse") {
         val listPre = Cons[Int](2, Cons[Int](1, Nil[Int]()))
         val listPost = Cons[Int](1, Cons[Int](2, Nil[Int]()))
@@ -51,7 +53,7 @@ class Laba2Tests extends FunSuite {
         assert(testFlatMap == list1)
     }
 
-
+// Compositions.scala
     test("Compositions.scala testCompose") {
         def f(a: Int) = a + 2
         def g(a: Int) = a + 3

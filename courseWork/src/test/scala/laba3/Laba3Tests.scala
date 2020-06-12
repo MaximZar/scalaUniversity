@@ -3,6 +3,7 @@ package laba3
 import org.scalatest.FunSuite
 
 class Laba3Tests extends FunSuite {
+// String.scala
     test("String.scala testUppercase") {
         assert(Strings.testUppercase("Hello") == "HELLO")
     }
@@ -23,9 +24,34 @@ class Laba3Tests extends FunSuite {
     }
 
 
+// Sequence.scala
     test("Sequence.scala testLastElement") {
-        val testLastElement = Sequence.testLastElement(Seq[Int](1, 2, 3))
-        val result = Option(3)
+        val seq = Seq[Int](1, 2, 3)
+        val testLastElement = Sequence.testLastElement(seq)
+        val result = Option[Int](3)
         assert(testLastElement == result)
+    }
+    test("Sequence.scala testZip") {
+        val testZip = Sequence.testZip(Seq[Int](1, 2), Seq[Int](3, 4))
+        val result = Seq((1, 3), (2, 4))
+        assert(testZip == result)
+    }
+    test("Sequence.scala testForAll") {
+        val cond: Int => Boolean = _ % 2 == 0
+        val testForAll = Sequence.testForAll(Seq(1, 2))(cond)
+        val result = false
+        assert(testForAll == result)
+    }
+    test("Sequence.scala testPalindrom") {
+        val testPalindrom = Sequence.testPalindrom(Seq(2, 5, 5, 2))
+        val result = true
+        assert(testPalindrom == result)
+    }
+    test("Sequence.scala testFlatMap") {
+        val seq = Seq((1,2),(3,4))
+        val func = ((a: Int, b: Int)) => Seq(a, b) //((Int, Int)) => Seq[?]
+        val result = Seq(1,2,3,4)
+        val testFlatMap = Sequence.testFlatMap(seq)(func)
+        assert(testFlatMap == result)
     }
 }

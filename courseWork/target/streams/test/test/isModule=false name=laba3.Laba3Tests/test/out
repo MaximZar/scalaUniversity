@@ -3,16 +3,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- String.scala testInterpolations[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- String.scala testComputation[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- String.scala testTakeTwo[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- Sequence.scala testLastElement *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: List() (of class scala.collection.immutable.Nil$)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at laba3.Sequence$.testLastElement(Sequence.scala:21)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at laba3.Laba3Tests.$anonfun$new$5(Laba3Tests.scala:27)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Sequence.scala testLastElement[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Sequence.scala testZip[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Sequence.scala testForAll[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Sequence.scala testPalindrom[0m[0m

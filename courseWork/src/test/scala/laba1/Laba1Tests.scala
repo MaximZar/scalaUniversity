@@ -3,6 +3,7 @@ package laba1
 import org.scalatest.FunSuite
 
 class Laba1Tests extends FunSuite {
+// Functions.scala
     test("Functions.scala testCircle") {
         val testCircle = Functions.testCircle(2.0)
         assert(testCircle == 12.566370614359172)
@@ -17,6 +18,7 @@ class Laba1Tests extends FunSuite {
     }
 
 
+// HiOrder.scala
     test("HiOrder.scala testNTimes") {
         val testNTimes = HigherOrder.testNTimes(HigherOrder.plus, 7, 9, 3)
         assert(testNTimes == 48)
@@ -27,6 +29,7 @@ class Laba1Tests extends FunSuite {
     }
 
 
+// Patterns.scala
     test("Patterns.scala testIntToString") {
         val testIntToString = PatternMatching.testIntToString(3)
         assert(testIntToString == "it is three")
