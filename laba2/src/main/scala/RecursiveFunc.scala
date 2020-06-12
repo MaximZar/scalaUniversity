@@ -1,3 +1,5 @@
+package laba2
+
 import scala.annotation.tailrec
 
 /** Реализуйте функции для решения следующих задач.
@@ -22,13 +24,11 @@ object RecursiveFunctions {
    */
 
   def reverse[A](list: List[A]): List[A] = {
-    def rever(a: A, l: List[A]): List[A] = Cons(a, l)
-
     @tailrec
     def loop(rem: List[A], num: List[A]): List[A]
     = rem match {
       case Nil() => num
-      case Cons(x, y) => loop (y, rever (x, num) )
+      case Cons(x, y) => loop(y, Cons(x, num))
     }
     loop(list, Nil())
   }
@@ -41,11 +41,10 @@ object RecursiveFunctions {
    */
 
   def map[A, B](list: List[A])(f: A => B): List[B] = {
-    def rever(a: A, l: List[B]): List[B] = Cons(f(a), l)
     @tailrec
     def loop2(l: List[A], num: List[B]): List[B] = l match {
       case Nil() => reverse(num)
-      case Cons(x,y) => loop2(y,rever(x,num))
+      case Cons(x,y) => loop2(y,Cons(f(x),num))
     }
     loop2(list,Nil())
   }
@@ -74,11 +73,10 @@ object RecursiveFunctions {
    */
 
   def flatMap[A,B](list: List[A])(f: A=>List[B]): List[B] = {
-    def rev(a: A, l: List[B]): List[B] = append(f(a),l)
     @tailrec
     def loop2(l: List[A],num: List[B]): List[B] = l match {
-      case Nil() => reverse(num)
-      case Cons(x,y) => loop2(y,rev(x,num))
+      case Nil() => reverse(num) //
+      case Cons(x,y) => loop2(y, append(f(x),num))
     }
     loop2(list, Nil())
   }

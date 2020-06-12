@@ -1,4 +1,4 @@
-package exercise1
+package laba1
 
 /** Напишите ваши решения в виде функций. */
 object HigherOrder {
@@ -19,5 +19,5 @@ object HigherOrder {
    *          if (a > b) a else b
    */
   def anon = (a: Int, b: Int) => if (a > b) a else b
-  def testAnonymousNTimes(a: Int, b: Int, n: Int): Int = anon(a, b)
+  def testAnonymousNTimes(a: Int, b: Int, n: Int): Int = nTimes(anon, a, b, n)
 }

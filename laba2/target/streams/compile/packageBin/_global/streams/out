@@ -1,0 +1,35 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\laba2_2.12-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Compositions$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\Compositions$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Compositions.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\Compositions.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Cons$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\Cons$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Cons.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\Cons.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	List.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\List.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Nil$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\Nil$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Nil.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\Nil.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	None$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\None$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	None.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\None.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Option.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\Option.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RecursiveData$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\RecursiveData$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RecursiveData.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\RecursiveData.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RecursiveFunctions$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\RecursiveFunctions$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RecursiveFunctions.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\RecursiveFunctions.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Some$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\Some$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Some.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba2\target\scala-2.12\classes\Some.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
