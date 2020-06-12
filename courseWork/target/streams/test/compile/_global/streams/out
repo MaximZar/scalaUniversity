@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Maxim\Desktop\Projects\scalaUniversity\courseWork\src\test\scala\laba3\Laba3Tests.scala:7:16: not found: value testUppercase[0m
+[0m[[0m[31merror[0m] [0m[0m        assert(testUppercase("Hello") == "HELLO")[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

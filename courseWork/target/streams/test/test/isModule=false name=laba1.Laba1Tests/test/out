@@ -1,0 +1,12 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mLaba1Tests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Functions.scala testCircle[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Functions.scala testRectangleCurried[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Functions.scala testRectangleUc[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- HiOrder.scala testNTimes[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- HiOrder.scala testAnonymousNTimes[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Patterns.scala testIntToString[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Patterns.scala testIsMaxAndMoritz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Patterns.scala testIsEven[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Patterns.scala testWinsA[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Patterns.scala testExtractMammalWeight[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Patterns.scala testUpdateFood[0m[0m
