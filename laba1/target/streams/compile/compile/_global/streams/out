@@ -1,11 +1,10 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Maxim\Desktop\Projects\scalaUniversity\laba1\src\main\scala\Patterns.scala:123:50: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : String("plants")[0m
-[0m[[0m[31merror[0m] [0m[0m required: exercise1.PatternMatching.Food[0m
-[0m[[0m[31merror[0m] [0m[0m      case Fish(name, food) => Fish(animal.name, "plants")[0m
-[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Maxim\Desktop\Projects\scalaUniversity\laba1\src\main\scala\Patterns.scala:124:50: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : String("plants")[0m
-[0m[[0m[31merror[0m] [0m[0m required: exercise1.PatternMatching.Food[0m
-[0m[[0m[31merror[0m] [0m[0m      case Bird(name, food) => Bird(animal.name, "plants")[0m
-[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Maxim\Desktop\Projects\scalaUniversity\laba1\src\main\scala\Animal.scala:31:1: case classes must have a parameter list; try 'case class Meat()' or 'case object Meat'[0m
+[0m[[0m[31merror[0m] [0m[0m    case class Vegetables[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Maxim\Desktop\Projects\scalaUniversity\laba1\src\main\scala\Animal.scala:32:1: case classes must have a parameter list; try 'case class Vegetables()' or 'case object Vegetables'[0m
+[0m[[0m[31merror[0m] [0m[0m    case class Plants[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Maxim\Desktop\Projects\scalaUniversity\laba1\src\main\scala\Animal.scala:33:3: case classes must have a parameter list; try 'case class Plants()' or 'case object Plants'[0m
+[0m[[0m[31merror[0m] [0m[0m  }[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

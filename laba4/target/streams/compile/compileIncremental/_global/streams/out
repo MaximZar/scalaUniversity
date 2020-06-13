@@ -1,0 +1,28 @@
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\src\main\scala\Typeclasses.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(Lab_ex4.Typeclasses, Lab_ex4.Typeclasses.Smash, Lab_ex4.Typeclasses.Reversable)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll sources are invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Lab_ex4.Typeclasses, Lab_ex4.Typeclasses.Smash, Lab_ex4.Typeclasses.Reversable[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all sources: number of invalidated sources > 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.3.5:compile for Scala 2.12.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.3.5:compile for Scala 2.12.10[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 402c6849 for Scala compiler version 2.12.10[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	C:\Program Files\Java\jre1.8.0_241\lib\resources.jar;C:\Program Files\Java\jre1.8.0_241\lib\rt.jar;C:\Program Files\Java\jre1.8.0_241\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_241\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_241\lib\jce.jar;C:\Program Files\Java\jre1.8.0_241\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_241\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_241\classes;C:\Users\Maxim\.sbt\boot\scala-2.12.10\lib\scala-library.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 2.5163311 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone compiling.[0m

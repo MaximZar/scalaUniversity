@@ -1,0 +1,25 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\laba4_2.12-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4\Typeclasses$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4\Typeclasses$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4\Typeclasses$Reversable$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4\Typeclasses$Reversable$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4\Typeclasses$Reversable$Reversable.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4\Typeclasses$Reversable$Reversable.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4\Typeclasses$Reversable$ReversableLikeString$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4\Typeclasses$Reversable$ReversableLikeString$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4\Typeclasses$Smash$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4\Typeclasses$Smash$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4\Typeclasses$Smash$Smash.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4\Typeclasses$Smash$Smash.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4\Typeclasses$Smash$SmashDouble$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4\Typeclasses$Smash$SmashDouble$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4\Typeclasses$Smash$SmashInt$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4\Typeclasses$Smash$SmashInt$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4\Typeclasses$Smash$SmashString$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4\Typeclasses$Smash$SmashString$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Lab_ex4\Typeclasses.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Maxim\Desktop\Projects\scalaUniversity\laba4\target\scala-2.12\classes\Lab_ex4\Typeclasses.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

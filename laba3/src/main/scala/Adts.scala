@@ -35,7 +35,7 @@ object Adts {
   // a) Дан List[Int], верните элемент с индексом n
 
   def GetNth(list: List[Int], n: Int): Option[Int] = {
-    List(1,2) match {
+    list match {
       case head :: tail => Some(list(n))
       case Nil => null
       case l => Option(l(n))
