@@ -1,0 +1,661 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          laba2\RecursiveFunc.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package laba2
+</span>2 <span style=''>
+</span>3 <span style=''>import scala.annotation.tailrec
+</span>4 <span style=''>
+</span>5 <span style=''>/** Реализуйте функции для решения следующих задач.
+</span>6 <span style=''> * Примечание: Попытайтесь сделать все функции с хвостовой рекурсией, используйте аннотацию для подстверждения.
+</span>7 <span style=''> * рекурсия будет хвостовой если:
+</span>8 <span style=''> *   1. рекурсия реализуется в одном направлении
+</span>9 <span style=''> *   2. вызов рекурсивной функции будет последней операцией перед возвратом
+</span>10 <span style=''> */
+</span>11 <span style=''>object RecursiveFunctions {
+</span>12 <span style=''>  def length[A](as: List[A]): Int = {
+</span>13 <span style=''>    @tailrec
+</span>14 <span style=''>    def loop(rem: List[A], agg: Int): Int = rem match {
+</span>15 <span style=''>      case Cons(_, tail) =&gt; </span><span style='background: #F0ADAD'>loop(tail, agg + 1)</span><span style=''>
+</span>16 <span style=''>      case Nil()         =&gt; agg
+</span>17 <span style=''>    }
+</span>18 <span style=''>
+</span>19 <span style=''>    </span><span style='background: #F0ADAD'>loop(as, 0)</span><span style=''>
+</span>20 <span style=''>  }
+</span>21 <span style=''>
+</span>22 <span style=''>  /* a) Напишите функцию которая записывает в обратном порядке список:
+</span>23 <span style=''>   *        def reverse[A](list: List[A]): List[A]
+</span>24 <span style=''>   */
+</span>25 <span style=''>
+</span>26 <span style=''>  def reverse[A](list: List[A]): List[A] = {
+</span>27 <span style=''>    @tailrec
+</span>28 <span style=''>    def loop(rem: List[A], num: List[A]): List[A]
+</span>29 <span style=''>    = rem match {
+</span>30 <span style=''>      case Nil() =&gt; num
+</span>31 <span style=''>      case Cons(x, y) =&gt; </span><span style='background: #AEF1AE'>loop(y, Cons(x, num))</span><span style=''>
+</span>32 <span style=''>    }
+</span>33 <span style=''>    </span><span style='background: #AEF1AE'>loop(list, Nil())</span><span style=''>
+</span>34 <span style=''>  }
+</span>35 <span style=''>
+</span>36 <span style=''>  // используйте функцию из пункта (a) здесь, не изменяйте сигнатуру
+</span>37 <span style=''>  def testReverse[A](list: List[A]): List[A] = </span><span style='background: #AEF1AE'>reverse(list)</span><span style=''>
+</span>38 <span style=''>
+</span>39 <span style=''>  /* b) Напишите функцию, которая применяет функцию к каждому значению списка:
+</span>40 <span style=''>   *        def map[A, B](list: List[A])(f: A =&gt; B): List[B]
+</span>41 <span style=''>   */
+</span>42 <span style=''>
+</span>43 <span style=''>  def map[A, B](list: List[A])(f: A =&gt; B): List[B] = {
+</span>44 <span style=''>    @tailrec
+</span>45 <span style=''>    def loop2(l: List[A], num: List[B]): List[B] = l match {
+</span>46 <span style=''>      case Nil() =&gt; </span><span style='background: #AEF1AE'>reverse(num)</span><span style=''>
+</span>47 <span style=''>      case Cons(x,y) =&gt; </span><span style='background: #AEF1AE'>loop2(y,Cons(f(x),num))</span><span style=''>
+</span>48 <span style=''>    }
+</span>49 <span style=''>    </span><span style='background: #AEF1AE'>loop2(list,Nil())</span><span style=''>
+</span>50 <span style=''>  }
+</span>51 <span style=''>
+</span>52 <span style=''>  // используйте функцию из пункта  (b) здесь, не изменяйте сигнатуру
+</span>53 <span style=''>  def testMap[A, B](list: List[A], f: A =&gt; B): List[B] = </span><span style='background: #AEF1AE'>map(list)(f)</span><span style=''>
+</span>54 <span style=''>
+</span>55 <span style=''>  /* c) Напишите функцию, которая присоединяет один список к другому:
+</span>56 <span style=''>   *        def append[A](l: List[A], r: List[A]): List[A]
+</span>57 <span style=''>   */
+</span>58 <span style=''>
+</span>59 <span style=''>  def append[A](l: List[A], r: List[A]): List[A] =
+</span>60 <span style=''>    l match {
+</span>61 <span style=''>      case Nil() =&gt; r
+</span>62 <span style=''>      case Cons(h,t) =&gt; </span><span style='background: #AEF1AE'>Cons(h, append(t, r))</span><span style=''>
+</span>63 <span style=''>    }
+</span>64 <span style=''>
+</span>65 <span style=''>  // используйте функцию из пункта  (c) здесь, не изменяйте сигнатуру
+</span>66 <span style=''>  def testAppend[A](l: List[A], r: List[A]): List[A] = </span><span style='background: #AEF1AE'>append(l,r)</span><span style=''>
+</span>67 <span style=''>
+</span>68 <span style=''>  /* d) Напишите функцию, которая применяет функцию к каждому значению списка:
+</span>69 <span style=''>   *        def flatMap[A, B](list: List[A])(f: A =&gt; List[B]): List[B]
+</span>70 <span style=''>   *
+</span>71 <span style=''>   *    она получает функцию, которая создает новый List[B] для каждого элемента типа A в
+</span>72 <span style=''>   *    списке. Поэтому вы создаете List[List[B]].
+</span>73 <span style=''>   */
+</span>74 <span style=''>
+</span>75 <span style=''>  def flatMap[A,B](list: List[A])(f: A=&gt;List[B]): List[B] = {
+</span>76 <span style=''>    @tailrec
+</span>77 <span style=''>    def loop2(l: List[A],num: List[B]): List[B] = l match {
+</span>78 <span style=''>      case Nil() =&gt; </span><span style='background: #AEF1AE'>reverse(num)</span><span style=''> //
+</span>79 <span style=''>      case Cons(x,y) =&gt; </span><span style='background: #AEF1AE'>loop2(y, append(f(x),num))</span><span style=''>
+</span>80 <span style=''>    }
+</span>81 <span style=''>    </span><span style='background: #AEF1AE'>loop2(list, Nil())</span><span style=''>
+</span>82 <span style=''>  }
+</span>83 <span style=''>
+</span>84 <span style=''>  // используйте функцию из пункта  (d) здесь, не изменяйте сигнатуру
+</span>85 <span style=''>  def testFlatMap[A, B](list: List[A], f: A =&gt; List[B]): List[B] =
+</span>86 <span style=''>    </span><span style='background: #AEF1AE'>flatMap(list)(f)</span><span style=''>
+</span>87 <span style=''>
+</span>88 <span style=''>  /* e) Вопрос: Возможно ли написать функцию с хвостовой рекурсией для `Tree`s? Если нет, почему?
+</span>89 <span style=''>  * Возможно:
+</span>90 <span style=''>  * def eval(t: Tree, env: Environmental): Int = t match {
+</span>91 <span style=''>  * case Sum(l,r) =&gt; eval(l, env) + eval (r, env)
+</span>92 <span style=''>  * }
+</span>93 <span style=''>  * */
+</span>94 <span style=''>}
+</span>95 <span style=''>
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          92
+        </td>
+        <td>
+          552
+          -
+          571
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.loop
+        </td>
+        <td style="background: #F0ADAD">
+          loop(tail, agg.+(1))
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          91
+        </td>
+        <td>
+          563
+          -
+          570
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #F0ADAD">
+          agg.+(1)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          93
+        </td>
+        <td>
+          619
+          -
+          630
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.loop
+        </td>
+        <td style="background: #F0ADAD">
+          loop(as, 0)
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          95
+        </td>
+        <td>
+          952
+          -
+          973
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.loop
+        </td>
+        <td style="background: #AEF1AE">
+          loop(y, Cons.apply[A](x, num))
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          94
+        </td>
+        <td>
+          960
+          -
+          972
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.Cons.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Cons.apply[A](x, num)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          97
+        </td>
+        <td>
+          986
+          -
+          1003
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.loop
+        </td>
+        <td style="background: #AEF1AE">
+          loop(list, Nil.apply[A]())
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          96
+        </td>
+        <td>
+          997
+          -
+          1002
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.Nil.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Nil.apply[A]()
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          98
+        </td>
+        <td>
+          1129
+          -
+          1142
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.reverse
+        </td>
+        <td style="background: #AEF1AE">
+          RecursiveFunctions.this.reverse[A](list)
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          99
+        </td>
+        <td>
+          1449
+          -
+          1461
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.reverse
+        </td>
+        <td style="background: #AEF1AE">
+          RecursiveFunctions.this.reverse[B](num)
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          101
+        </td>
+        <td>
+          1495
+          -
+          1509
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.Cons.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Cons.apply[B](f.apply(x), num)
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          100
+        </td>
+        <td>
+          1500
+          -
+          1504
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Function1.apply
+        </td>
+        <td style="background: #AEF1AE">
+          f.apply(x)
+        </td>
+      </tr><tr>
+        <td>
+          47
+        </td>
+        <td>
+          102
+        </td>
+        <td>
+          1487
+          -
+          1510
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.loop2
+        </td>
+        <td style="background: #AEF1AE">
+          loop2(y, Cons.apply[B](f.apply(x), num))
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          104
+        </td>
+        <td>
+          1523
+          -
+          1540
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.loop2
+        </td>
+        <td style="background: #AEF1AE">
+          loop2(list, Nil.apply[B]())
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          103
+        </td>
+        <td>
+          1534
+          -
+          1539
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.Nil.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Nil.apply[B]()
+        </td>
+      </tr><tr>
+        <td>
+          53
+        </td>
+        <td>
+          105
+        </td>
+        <td>
+          1677
+          -
+          1689
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.map
+        </td>
+        <td style="background: #AEF1AE">
+          RecursiveFunctions.this.map[A, B](list)(f)
+        </td>
+      </tr><tr>
+        <td>
+          62
+        </td>
+        <td>
+          107
+        </td>
+        <td>
+          1947
+          -
+          1968
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.Cons.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Cons.apply[A](h, RecursiveFunctions.this.append[A](t, r))
+        </td>
+      </tr><tr>
+        <td>
+          62
+        </td>
+        <td>
+          106
+        </td>
+        <td>
+          1955
+          -
+          1967
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.append
+        </td>
+        <td style="background: #AEF1AE">
+          RecursiveFunctions.this.append[A](t, r)
+        </td>
+      </tr><tr>
+        <td>
+          66
+        </td>
+        <td>
+          108
+        </td>
+        <td>
+          2105
+          -
+          2116
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.append
+        </td>
+        <td style="background: #AEF1AE">
+          RecursiveFunctions.this.append[A](l, r)
+        </td>
+      </tr><tr>
+        <td>
+          78
+        </td>
+        <td>
+          109
+        </td>
+        <td>
+          2588
+          -
+          2600
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.reverse
+        </td>
+        <td style="background: #AEF1AE">
+          RecursiveFunctions.this.reverse[B](num)
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          110
+        </td>
+        <td>
+          2645
+          -
+          2649
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Function1.apply
+        </td>
+        <td style="background: #AEF1AE">
+          f.apply(x)
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          112
+        </td>
+        <td>
+          2629
+          -
+          2655
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.loop2
+        </td>
+        <td style="background: #AEF1AE">
+          loop2(y, RecursiveFunctions.this.append[B](f.apply(x), num))
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          111
+        </td>
+        <td>
+          2638
+          -
+          2654
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.append
+        </td>
+        <td style="background: #AEF1AE">
+          RecursiveFunctions.this.append[B](f.apply(x), num)
+        </td>
+      </tr><tr>
+        <td>
+          81
+        </td>
+        <td>
+          113
+        </td>
+        <td>
+          2680
+          -
+          2685
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.Nil.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Nil.apply[B]()
+        </td>
+      </tr><tr>
+        <td>
+          81
+        </td>
+        <td>
+          114
+        </td>
+        <td>
+          2668
+          -
+          2686
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.loop2
+        </td>
+        <td style="background: #AEF1AE">
+          loop2(list, Nil.apply[B]())
+        </td>
+      </tr><tr>
+        <td>
+          86
+        </td>
+        <td>
+          115
+        </td>
+        <td>
+          2838
+          -
+          2854
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba2.RecursiveFunctions.flatMap
+        </td>
+        <td style="background: #AEF1AE">
+          RecursiveFunctions.this.flatMap[A, B](list)(f)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

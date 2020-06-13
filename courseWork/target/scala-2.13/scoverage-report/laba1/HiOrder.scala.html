@@ -1,0 +1,274 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          laba1\HiOrder.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package laba1
+</span>2 <span style=''>
+</span>3 <span style=''>/** Напишите ваши решения в виде функций. */
+</span>4 <span style=''>object HigherOrder {
+</span>5 <span style=''>
+</span>6 <span style=''>  val plus: (Int, Int) =&gt; Int = </span><span style='background: #AEF1AE'>_ + _</span><span style=''>
+</span>7 <span style=''>  val multiply: (Int, Int) =&gt; Int = </span><span style='background: #F0ADAD'>_ * _</span><span style=''>
+</span>8 <span style=''>
+</span>9 <span style=''>  /* a) Напишите функцию, которая принимает `f: (Int, Int) =&gt; Int`, параменты `a` и `b`
+</span>10 <span style=''>   *    и коэффициент умножения `n` и возвращает n * f(a, b). Назовите `nTimes`.
+</span>11 <span style=''>   */
+</span>12 <span style=''>  def nTimes(f: (Int, Int) =&gt; Int, a: Int, b: Int, n: Int): Int = </span><span style='background: #AEF1AE'>n * f(a, b)</span><span style=''>
+</span>13 <span style=''>  
+</span>14 <span style=''>  // примените вашу функцию (a) здесь, не изменяйте сигнатуру
+</span>15 <span style=''>  def testNTimes(f: (Int, Int) =&gt; Int, a: Int, b: Int, n: Int): Int = </span><span style='background: #AEF1AE'>nTimes(f, a, b, n)</span><span style=''>
+</span>16 <span style=''>
+</span>17 <span style=''>  /* b) Напишите анонимную функцию, функцию без идентификатора ((a, b) =&gt; ???) для `nTimes` которая
+</span>18 <span style=''>   *    выполняет следующее:
+</span>19 <span style=''>   *          if (a &gt; b) a else b
+</span>20 <span style=''>   */
+</span>21 <span style=''>  def anon = (a: Int, b: Int) =&gt; if (</span><span style='background: #AEF1AE'>a &gt; b</span><span style=''>) </span><span style='background: #F0ADAD'>a</span><span style=''> else </span><span style='background: #AEF1AE'>b</span><span style=''>
+</span>22 <span style=''>  def testAnonymousNTimes(a: Int, b: Int, n: Int): Int = </span><span style='background: #AEF1AE'>nTimes(anon, a, b, n)</span><span style=''>
+</span>23 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          6
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          114
+          -
+          119
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          x$1.+(x$2)
+        </td>
+      </tr><tr>
+        <td>
+          7
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          156
+          -
+          161
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.*
+        </td>
+        <td style="background: #F0ADAD">
+          x$3.*(x$4)
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          404
+          -
+          415
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.*
+        </td>
+        <td style="background: #AEF1AE">
+          n.*(f.apply(a, b))
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          408
+          -
+          415
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Function2.apply
+        </td>
+        <td style="background: #AEF1AE">
+          f.apply(a, b)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          551
+          -
+          569
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba1.HigherOrder.nTimes
+        </td>
+        <td style="background: #AEF1AE">
+          HigherOrder.this.nTimes(f, a, b, n)
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          791
+          -
+          792
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          laba1.HigherOrder.b
+        </td>
+        <td style="background: #AEF1AE">
+          b
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          784
+          -
+          785
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          laba1.HigherOrder.a
+        </td>
+        <td style="background: #F0ADAD">
+          a
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          777
+          -
+          782
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          a.&gt;(b)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          850
+          -
+          871
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba1.HigherOrder.nTimes
+        </td>
+        <td style="background: #AEF1AE">
+          HigherOrder.this.nTimes(HigherOrder.this.anon, a, b, n)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          857
+          -
+          861
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.HigherOrder.anon
+        </td>
+        <td style="background: #AEF1AE">
+          HigherOrder.this.anon
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

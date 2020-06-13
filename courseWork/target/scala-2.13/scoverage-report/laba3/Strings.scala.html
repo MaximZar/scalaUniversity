@@ -1,0 +1,266 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          laba3\Strings.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>/** Напишите ваши решения в тестовых функциях.
+</span>2 <span style=''> *
+</span>3 <span style=''> * https://www.scala-lang.org/api/2.12.3/scala/collection/immutable/StringOps.html
+</span>4 <span style=''> */
+</span>5 <span style=''>package laba3
+</span>6 <span style=''>object Strings {
+</span>7 <span style=''>
+</span>8 <span style=''>  /* a) Преобразуйте все символы типа Char в верхний регистр (не используйте заглавные буквы).
+</span>9 <span style=''>   *
+</span>10 <span style=''>   */
+</span>11 <span style=''>  def testUppercase(str: String): String = </span><span style='background: #AEF1AE'>str.toUpperCase()</span><span style=''>
+</span>12 <span style=''>
+</span>13 <span style=''>  /* b) Вставьте следующие значения в строку:
+</span>14 <span style=''>   *       Hi my name is &lt;name&gt; and I am &lt;age&gt; years old.
+</span>15 <span style=''>   *
+</span>16 <span style=''>   */
+</span>17 <span style=''>  def testInterpolations(name: String, age: Int): String =
+</span>18 <span style=''>    </span><span style='background: #AEF1AE'>&quot;Hi my name is %s and I am %d years old.&quot;.format(name, age)</span><span style=''>
+</span>19 <span style=''>
+</span>20 <span style=''>  /* c) Добавьте два числа в следующую строку:
+</span>21 <span style=''>   *       Hi,
+</span>22 <span style=''>   *       now follows a quite hard calculation. We try to add:
+</span>23 <span style=''>   *         a := &lt;value of a&gt;
+</span>24 <span style=''>   *         b := &lt;value of b&gt;
+</span>25 <span style=''>   *
+</span>26 <span style=''>   *         result is &lt;a + b&gt;
+</span>27 <span style=''>   *
+</span>28 <span style=''>   *
+</span>29 <span style=''>   */
+</span>30 <span style=''>  def testComputation(a: Int, b: Int): String =
+</span>31 <span style=''>    </span><span style='background: #AEF1AE'>&quot;Hi, \n now follows a quite hard calculation. We try ta add: \n\ta := %d \n\tb := %d\n\n\tresult is %d&quot;.format(a,b,a+b)</span><span style=''>
+</span>32 <span style=''>
+</span>33 <span style=''>  /* d) Если длина строки равна 2, верните всю строку, иначе верните первые два символа строки.
+</span>34 <span style=''>  */
+</span>35 <span style=''>  def testTakeTwo(str: String): String = if (</span><span style='background: #AEF1AE'>str.length == 2</span><span style=''>) </span><span style='background: #F0ADAD'>str</span><span style=''> else </span><span style='background: #AEF1AE'>str.take(2)</span><span style=''>
+</span>36 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          187
+        </td>
+        <td>
+          328
+          -
+          345
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.toUpperCase
+        </td>
+        <td style="background: #AEF1AE">
+          str.toUpperCase()
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          188
+        </td>
+        <td>
+          532
+          -
+          591
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.StringOps.format
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(&quot;Hi my name is %s and I am %d years old.&quot;).format(name, age)
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          191
+        </td>
+        <td>
+          898
+          -
+          1017
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.StringOps.format
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(&quot;Hi, \n now follows a quite hard calculation. We try ta add: \n\ta := %d \n\tb := %d\n\n\tresult is %d&quot;).format(a, b, a.+(b))
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          190
+        </td>
+        <td>
+          1013
+          -
+          1016
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          a.+(b)
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          189
+        </td>
+        <td>
+          898
+          -
+          1001
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Hi, \n now follows a quite hard calculation. We try ta add: \n\ta := %d \n\tb := %d\n\n\tresult is %d&quot;
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          194
+        </td>
+        <td>
+          1195
+          -
+          1206
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.StringOps.take
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(str).take(2)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          193
+        </td>
+        <td>
+          1186
+          -
+          1189
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          laba3.Strings.str
+        </td>
+        <td style="background: #F0ADAD">
+          str
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          192
+        </td>
+        <td>
+          1169
+          -
+          1184
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          str.length().==(2)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          195
+        </td>
+        <td>
+          1195
+          -
+          1206
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.collection.StringOps.take
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(str).take(2)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

@@ -1,0 +1,1359 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          laba1\Patterns.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package laba1
+</span>2 <span style=''>
+</span>3 <span style=''>/** Напишите решение в виде функции. 
+</span>4 <span style=''>  * 
+</span>5 <span style=''>  * Синтаксис:
+</span>6 <span style=''>  *   val a: Int = ???
+</span>7 <span style=''>  * 
+</span>8 <span style=''>  *   a match {
+</span>9 <span style=''>  *     case 0 =&gt; true
+</span>10 <span style=''>  *     case _ =&gt; false
+</span>11 <span style=''>  *   }
+</span>12 <span style=''>  */
+</span>13 <span style=''>object PatternMatching {
+</span>14 <span style=''>
+</span>15 <span style=''>  sealed trait Hand
+</span>16 <span style=''>  case object Rock    extends Hand
+</span>17 <span style=''>  case object Paper   extends Hand
+</span>18 <span style=''>  case object Scissor extends Hand
+</span>19 <span style=''>
+</span>20 <span style=''>  sealed trait Result
+</span>21 <span style=''>  case object Win  extends Result
+</span>22 <span style=''>  case object Lose extends Result
+</span>23 <span style=''>  case object Draw extends Result
+</span>24 <span style=''>
+</span>25 <span style=''>  sealed trait Food
+</span>26 <span style=''>  case object Meat       extends Food
+</span>27 <span style=''>  case object Vegetables extends Food
+</span>28 <span style=''>  case object Plants     extends Food
+</span>29 <span style=''>
+</span>30 <span style=''>  sealed trait Animal {
+</span>31 <span style=''>
+</span>32 <span style=''>    val name: String
+</span>33 <span style=''>    val food: Food
+</span>34 <span style=''>  }
+</span>35 <span style=''>  case class Mammal(name: String, food: Food, weight: Int) extends Animal
+</span>36 <span style=''>  case class Fish(name: String, food: Food)                extends Animal
+</span>37 <span style=''>  case class Bird(name: String, food: Food)                extends Animal
+</span>38 <span style=''>
+</span>39 <span style=''>
+</span>40 <span style=''>
+</span>41 <span style=''>  /* a) Напишите функцию, которая ставит в соответствие числу строку слудеющим образом:
+</span>42 <span style=''>   * Если:
+</span>43 <span style=''>   *     1 =&gt; &quot;it is one&quot;
+</span>44 <span style=''>   *     2 =&gt; &quot;it is two&quot;
+</span>45 <span style=''>   *     3 =&gt; &quot;it is three&quot;
+</span>46 <span style=''>   *     иначе =&gt; &quot;what's that&quot;
+</span>47 <span style=''>   */
+</span>48 <span style=''>  def aTask(value: Int): String = {
+</span>49 <span style=''>    value match {
+</span>50 <span style=''>      case 1 =&gt; </span><span style='background: #F0ADAD'>&quot;it is one&quot;</span><span style=''>
+</span>51 <span style=''>      case 2 =&gt; </span><span style='background: #AEF1AE'>&quot;it is two&quot;</span><span style=''>
+</span>52 <span style=''>      case 3 =&gt; </span><span style='background: #AEF1AE'>&quot;it is three&quot;</span><span style=''>
+</span>53 <span style=''>      case _ =&gt; </span><span style='background: #AEF1AE'>&quot;what's that&quot;</span><span style=''>
+</span>54 <span style=''>    }
+</span>55 <span style=''>  }
+</span>56 <span style=''>
+</span>57 <span style=''>  // примените вашу функцию из пункта (a) здесь, не изменяя сигнатуру
+</span>58 <span style=''>  def testIntToString(value: Int): String = </span><span style='background: #AEF1AE'>aTask(value)</span><span style=''>
+</span>59 <span style=''>
+</span>60 <span style=''>  /* b) Напишите функцию которая возвращает true если переменная `value` принимает значение:
+</span>61 <span style=''>   *     &quot;max&quot; или &quot;Max
+</span>62 <span style=''>   *     &quot;moritz&quot; или &quot;Moritz&quot;
+</span>63 <span style=''>   */
+</span>64 <span style=''>  def IsMaxAndMoritz(value: String): Boolean = {
+</span>65 <span style=''>    value match {
+</span>66 <span style=''>      case &quot;max&quot; =&gt; </span><span style='background: #F0ADAD'>true</span><span style=''>
+</span>67 <span style=''>      case &quot;Max&quot; =&gt; </span><span style='background: #AEF1AE'>true</span><span style=''>
+</span>68 <span style=''>      case &quot;moritz&quot; =&gt; </span><span style='background: #F0ADAD'>true</span><span style=''>
+</span>69 <span style=''>      case &quot;Moritz&quot; =&gt; </span><span style='background: #F0ADAD'>true</span><span style=''>
+</span>70 <span style=''>      case _ =&gt; </span><span style='background: #AEF1AE'>false</span><span style=''>
+</span>71 <span style=''>    }
+</span>72 <span style=''>  }  
+</span>73 <span style=''>
+</span>74 <span style=''>
+</span>75 <span style=''>  // примените функции из пункта (b) здесь, не изменяя сигнатуру
+</span>76 <span style=''>  def testIsMaxAndMoritz(value: String): Boolean = </span><span style='background: #AEF1AE'>IsMaxAndMoritz(value)</span><span style=''>
+</span>77 <span style=''>
+</span>78 <span style=''>  // c) Напишите функцию проверки является ли `value` четным 
+</span>79 <span style=''>  def isEven(value: Int): Boolean = </span><span style='background: #AEF1AE'>value % 2 == 0</span><span style=''>
+</span>80 <span style=''>
+</span>81 <span style=''>
+</span>82 <span style=''>  // примените функции из пункта (c) здесь, не изменяя сигнатуру
+</span>83 <span style=''>  def testIsEven(value: Int): Boolean = </span><span style='background: #AEF1AE'>isEven(value)</span><span style=''>
+</span>84 <span style=''>
+</span>85 <span style=''>
+</span>86 <span style=''>  
+</span>87 <span style=''>  /* d) Напишите функцию, моделирующую игру в Камень ножницы бумага 
+</span>88 <span style=''>   *     1. камень побеждает ножницы
+</span>89 <span style=''>   *     2. ножницы побеждают бумагу
+</span>90 <span style=''>   *     3. бумага побеждает камень
+</span>91 <span style=''>   *    Выиграет ли игрок `a`?
+</span>92 <span style=''>   */
+</span>93 <span style=''>  def winsA(a: Hand, b: Hand): Result = {
+</span>94 <span style=''>    a match {
+</span>95 <span style=''>      case Rock =&gt; if (</span><span style='background: #AEF1AE'>b == Paper</span><span style=''>) </span><span style='background: #F0ADAD'>Lose</span><span style=''> else </span><span style='background: #AEF1AE'>if (b == Rock) </span><span style='background: #F0ADAD'>Draw</span><span style='background: #AEF1AE'> else Win</span><span style=''> 
+</span>96 <span style=''>      case Paper =&gt; if (</span><span style='background: #AEF1AE'>b == Scissor</span><span style=''>) </span><span style='background: #F0ADAD'>Lose</span><span style=''> else </span><span style='background: #AEF1AE'>if (b == Paper) </span><span style='background: #F0ADAD'>Draw</span><span style='background: #AEF1AE'> else Win</span><span style=''>
+</span>97 <span style=''>      case Scissor =&gt; if (</span><span style='background: #AEF1AE'>b == Rock</span><span style=''>) </span><span style='background: #F0ADAD'>Lose</span><span style=''> else </span><span style='background: #AEF1AE'>if (b == Scissor) </span><span style='background: #F0ADAD'>Draw</span><span style='background: #AEF1AE'> else Win</span><span style=''>
+</span>98 <span style=''>    }
+</span>99 <span style=''>  }
+</span>100 <span style=''>
+</span>101 <span style=''>  // примените вашу функцию из пункта (d) здесь, не изменяя сигнатуру
+</span>102 <span style=''>  def testWinsA(a: Hand, b: Hand): Result = </span><span style='background: #AEF1AE'>winsA(a, b)</span><span style=''>
+</span>103 <span style=''>
+</span>104 <span style=''>
+</span>105 <span style=''>
+</span>106 <span style=''>  // Примечание: используйте определение Animals
+</span>107 <span style=''>
+</span>108 <span style=''>  // e) Верните вес (weight: Int) объекта Mammal, иначе верните -1.
+</span>109 <span style=''>  def retWeight(animal: Animal): Int = {
+</span>110 <span style=''>    animal match {
+</span>111 <span style=''>      case Mammal(name, food, weight) =&gt; weight
+</span>112 <span style=''>      case _ =&gt; </span><span style='background: #F0ADAD'>-1</span><span style=''>
+</span>113 <span style=''>    }
+</span>114 <span style=''>  }
+</span>115 <span style=''>
+</span>116 <span style=''>  // примените функцию из пункта (e) здесь, не изменяйте сигнатуру
+</span>117 <span style=''>  def testExtractMammalWeight(animal: Animal): Int = </span><span style='background: #AEF1AE'>retWeight(animal)</span><span style=''>
+</span>118 <span style=''>
+</span>119 <span style=''>
+</span>120 <span style=''>  // f) Измените поле еда объектов классов Fishes и Birds на Plants, класс Mammels оставьте неизмененным.
+</span>121 <span style=''>  def change(animal: Animal): Animal = {
+</span>122 <span style=''>    animal match {
+</span>123 <span style=''>      case Fish(name, food) =&gt; </span><span style='background: #AEF1AE'>Fish(animal.name, Plants)</span><span style=''>
+</span>124 <span style=''>      case Bird(name, food) =&gt; </span><span style='background: #AEF1AE'>Bird(animal.name, Plants)</span><span style=''>
+</span>125 <span style=''>      case _ =&gt; animal
+</span>126 <span style=''>    }
+</span>127 <span style=''>  }
+</span>128 <span style=''>
+</span>129 <span style=''>
+</span>130 <span style=''>  // примените функцию из пункта (f) здесь, не изменяйте сигнатуру
+</span>131 <span style=''>  def testUpdateFood(animal: Animal): Animal = </span><span style='background: #AEF1AE'>change(animal)</span><span style=''>
+</span>132 <span style=''>
+</span>133 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          50
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          1170
+          -
+          1181
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;it is one&quot;
+        </td>
+      </tr><tr>
+        <td>
+          51
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          1198
+          -
+          1209
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;it is two&quot;
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          1226
+          -
+          1239
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;it is three&quot;
+        </td>
+      </tr><tr>
+        <td>
+          53
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          1256
+          -
+          1269
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;what\'s that&quot;
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          1395
+          -
+          1407
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba1.PatternMatching.aTask
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.aTask(value)
+        </td>
+      </tr><tr>
+        <td>
+          66
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          1650
+          -
+          1654
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          true
+        </td>
+      </tr><tr>
+        <td>
+          67
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          1675
+          -
+          1679
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          true
+        </td>
+      </tr><tr>
+        <td>
+          68
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          1703
+          -
+          1707
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          true
+        </td>
+      </tr><tr>
+        <td>
+          69
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          1731
+          -
+          1735
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          true
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          1752
+          -
+          1757
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          false
+        </td>
+      </tr><tr>
+        <td>
+          76
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          1888
+          -
+          1909
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba1.PatternMatching.IsMaxAndMoritz
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.IsMaxAndMoritz(value)
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          2009
+          -
+          2023
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          value.%(2).==(0)
+        </td>
+      </tr><tr>
+        <td>
+          83
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          2131
+          -
+          2144
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba1.PatternMatching.isEven
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.isEven(value)
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          2457
+          -
+          2461
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Lose
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Lose
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          2471
+          -
+          2480
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          b.==(PatternMatching.this.Rock)
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          2492
+          -
+          2495
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Win
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Win
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          2467
+          -
+          2495
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          if (b.==(PatternMatching.this.Rock))
+  PatternMatching.this.Draw
+else
+  PatternMatching.this.Win
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          2445
+          -
+          2455
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          b.==(PatternMatching.this.Paper)
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          2476
+          -
+          2480
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Rock
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Rock
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          2482
+          -
+          2486
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          laba1.PatternMatching.Draw
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Draw
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          2482
+          -
+          2486
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Draw
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Draw
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          2450
+          -
+          2455
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Paper
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Paper
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          2492
+          -
+          2495
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          laba1.PatternMatching.Win
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Win
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          2457
+          -
+          2461
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          laba1.PatternMatching.Lose
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Lose
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          2571
+          -
+          2574
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          laba1.PatternMatching.Win
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Win
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          2526
+          -
+          2533
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Scissor
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Scissor
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          2535
+          -
+          2539
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          laba1.PatternMatching.Lose
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Lose
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          2561
+          -
+          2565
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Draw
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Draw
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          2549
+          -
+          2559
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          b.==(PatternMatching.this.Paper)
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          2571
+          -
+          2574
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Win
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Win
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          2535
+          -
+          2539
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Lose
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Lose
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          2554
+          -
+          2559
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Paper
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Paper
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          2561
+          -
+          2565
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          laba1.PatternMatching.Draw
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Draw
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          2521
+          -
+          2533
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          b.==(PatternMatching.this.Scissor)
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          2545
+          -
+          2574
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          if (b.==(PatternMatching.this.Paper))
+  PatternMatching.this.Draw
+else
+  PatternMatching.this.Win
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          2640
+          -
+          2644
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          laba1.PatternMatching.Draw
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Draw
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          2601
+          -
+          2610
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          b.==(PatternMatching.this.Rock)
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          2622
+          -
+          2653
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          if (b.==(PatternMatching.this.Scissor))
+  PatternMatching.this.Draw
+else
+  PatternMatching.this.Win
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          2631
+          -
+          2638
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Scissor
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Scissor
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          2612
+          -
+          2616
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          laba1.PatternMatching.Lose
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Lose
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          2640
+          -
+          2644
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Draw
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Draw
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          2606
+          -
+          2610
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Rock
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Rock
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          2650
+          -
+          2653
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          laba1.PatternMatching.Win
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Win
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          2650
+          -
+          2653
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Win
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Win
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          2612
+          -
+          2616
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Lose
+        </td>
+        <td style="background: #F0ADAD">
+          PatternMatching.this.Lose
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          2626
+          -
+          2638
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          b.==(PatternMatching.this.Scissor)
+        </td>
+      </tr><tr>
+        <td>
+          102
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          2779
+          -
+          2790
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba1.PatternMatching.winsA
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.winsA(a, b)
+        </td>
+      </tr><tr>
+        <td>
+          112
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          3036
+          -
+          3038
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          -1
+        </td>
+      </tr><tr>
+        <td>
+          117
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          3170
+          -
+          3187
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba1.PatternMatching.retWeight
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.retWeight(animal)
+        </td>
+      </tr><tr>
+        <td>
+          123
+        </td>
+        <td>
+          68
+        </td>
+        <td>
+          3387
+          -
+          3412
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba1.PatternMatching.Fish.apply
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Fish.apply(animal.name, PatternMatching.this.Plants)
+        </td>
+      </tr><tr>
+        <td>
+          123
+        </td>
+        <td>
+          67
+        </td>
+        <td>
+          3405
+          -
+          3411
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Plants
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Plants
+        </td>
+      </tr><tr>
+        <td>
+          123
+        </td>
+        <td>
+          66
+        </td>
+        <td>
+          3392
+          -
+          3403
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Animal.name
+        </td>
+        <td style="background: #AEF1AE">
+          animal.name
+        </td>
+      </tr><tr>
+        <td>
+          124
+        </td>
+        <td>
+          71
+        </td>
+        <td>
+          3444
+          -
+          3469
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba1.PatternMatching.Bird.apply
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Bird.apply(animal.name, PatternMatching.this.Plants)
+        </td>
+      </tr><tr>
+        <td>
+          124
+        </td>
+        <td>
+          70
+        </td>
+        <td>
+          3462
+          -
+          3468
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Plants
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.Plants
+        </td>
+      </tr><tr>
+        <td>
+          124
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          3449
+          -
+          3460
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba1.PatternMatching.Animal.name
+        </td>
+        <td style="background: #AEF1AE">
+          animal.name
+        </td>
+      </tr><tr>
+        <td>
+          131
+        </td>
+        <td>
+          72
+        </td>
+        <td>
+          3619
+          -
+          3633
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba1.PatternMatching.change
+        </td>
+        <td style="background: #AEF1AE">
+          PatternMatching.this.change(animal)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

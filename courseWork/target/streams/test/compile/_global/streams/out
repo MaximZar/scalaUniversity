@@ -1,4 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Maxim\Desktop\Projects\scalaUniversity\courseWork\src\test\scala\laba3\Laba3Tests.scala:96:28: scala.util.Either.type does not take parameters[0m
-[0m[[0m[31merror[0m] [0m[0m        val result = Either("Left", 5)[0m
-[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Maxim\Desktop\Projects\scalaUniversity\courseWork\src\test\scala\laba3\Laba3Tests.scala:95:49: not enough arguments for method apply: (x: A): Option[A] in object Option.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter x.[0m
+[0m[[0m[31merror[0m] [0m[0m        val testDouble2 = Adts.testDouble(Option())[0m
+[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

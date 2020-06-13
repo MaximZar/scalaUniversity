@@ -1,0 +1,534 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          laba3\Maps.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>/** Напишите вашу реализацию в тестовые функции.
+</span>2 <span style=''> *
+</span>3 <span style=''> * https://docs.scala-lang.org/overviews/collections/maps.html
+</span>4 <span style=''> */
+</span>5 <span style=''>package laba3
+</span>6 <span style=''>object Maps {
+</span>7 <span style=''>
+</span>8 <span style=''>  case class User(name: String, age: Int)
+</span>9 <span style=''>
+</span>10 <span style=''>  /* a) В данной Seq[User] сгруппируйте пользователей по имени (`groupBy`) и вычислите средний возраст: `name -&gt; averageAge`
+</span>11 <span style=''>   *    Вы можете реализовать ваше решение в теле тестовой функции. Не изменяйте сигнатуру.
+</span>12 <span style=''>   */
+</span>13 <span style=''>  def testGroupUsers(users: Seq[User]): Map[String, Int] = {
+</span>14 <span style=''>    var map: Map[String, Int] = </span><span style='background: #AEF1AE'>Map()</span><span style=''>
+</span>15 <span style=''>    var name = </span><span style='background: #AEF1AE'>users.groupBy(_.name)</span><span style=''>
+</span>16 <span style=''>    var average: Int = </span><span style='background: #AEF1AE'>0</span><span style=''>
+</span>17 <span style=''>    </span><span style='background: #AEF1AE'>for (e &lt;- users) {
+</span>18 <span style=''></span><span style='background: #AEF1AE'>      val age: Int = e.age
+</span>19 <span style=''></span><span style='background: #AEF1AE'>      average = average + age
+</span>20 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>21 <span style=''>    average = </span><span style='background: #AEF1AE'>average / name.size</span><span style=''>
+</span>22 <span style=''>    </span><span style='background: #AEF1AE'>for (e &lt;- name) {
+</span>23 <span style=''></span><span style='background: #AEF1AE'>      map += (e._1 -&gt; average)</span><span style=''>
+</span>24 <span style=''>    }
+</span>25 <span style=''>    map
+</span>26 <span style=''>  }
+</span>27 <span style=''>
+</span>28 <span style=''>  /* b) Дана `Map[String, User]` состоящая из имен пользователей `User`, сколько имен пользователей, содержащихся в Map, содержат подстроку &quot;Adam&quot;?
+</span>29 <span style=''>   *    Вы можете реализовать ваше решение в теле тестовой функции. Не изменяйте сигнатуру.
+</span>30 <span style=''>   */
+</span>31 <span style=''>  def testNumberFrodos(map: Map[String, User]): Int = {
+</span>32 <span style=''>    var a: Int = </span><span style='background: #AEF1AE'>0</span><span style=''>
+</span>33 <span style=''>    </span><span style='background: #AEF1AE'>for (num &lt;- map) {
+</span>34 <span style=''></span><span style='background: #AEF1AE'>      if (num._2.name.indexOf(&quot;Adam&quot;) != (-1))
+</span>35 <span style=''></span><span style='background: #AEF1AE'>        a += 1</span><span style=''>
+</span>36 <span style=''>    }
+</span>37 <span style=''>    a
+</span>38 <span style=''>  }
+</span>39 <span style=''>
+</span>40 <span style=''>  /* c) Удалите всех пользователей возраст которых менее 35 лет.
+</span>41 <span style=''>   *    Вы можете реализовать ваше решение в теле тестовой функции. Не изменяйте сигнатуру.
+</span>42 <span style=''>   */
+</span>43 <span style=''>  def testUnderaged(map: Map[String, User]): Map[String, User] = {
+</span>44 <span style=''>    </span><span style='background: #AEF1AE'>map.filter(k =&gt; k._2.age &gt;= 35)</span><span style=''>
+</span>45 <span style=''>  }
+</span>46 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          142
+        </td>
+        <td>
+          520
+          -
+          525
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.MapFactory.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.Map.apply[String, Nothing]()
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          144
+        </td>
+        <td>
+          542
+          -
+          563
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOps.groupBy
+        </td>
+        <td style="background: #AEF1AE">
+          users.groupBy[String](((x$1: laba3.Maps.User) =&gt; x$1.name))
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          143
+        </td>
+        <td>
+          556
+          -
+          562
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba3.Maps.User.name
+        </td>
+        <td style="background: #AEF1AE">
+          x$1.name
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          145
+        </td>
+        <td>
+          588
+          -
+          589
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          148
+        </td>
+        <td>
+          595
+          -
+          679
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.foreach
+        </td>
+        <td style="background: #AEF1AE">
+          users.foreach[Unit](((e: laba3.Maps.User) =&gt; {
+  val age: Int = e.age;
+  average = average.+(age)
+}))
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          146
+        </td>
+        <td>
+          636
+          -
+          641
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba3.Maps.User.age
+        </td>
+        <td style="background: #AEF1AE">
+          e.age
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          147
+        </td>
+        <td>
+          659
+          -
+          672
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          average.+(age)
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          149
+        </td>
+        <td>
+          705
+          -
+          714
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.size
+        </td>
+        <td style="background: #AEF1AE">
+          name.size
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          150
+        </td>
+        <td>
+          695
+          -
+          714
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int./
+        </td>
+        <td style="background: #AEF1AE">
+          average./(name.size)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          153
+        </td>
+        <td>
+          720
+          -
+          769
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.foreach
+        </td>
+        <td style="background: #AEF1AE">
+          name.foreach[Unit](((e: (String, Seq[laba3.Maps.User])) =&gt; map = map.+[Int](scala.Predef.ArrowAssoc[String](e._1).-&gt;[Int](average))))
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          151
+        </td>
+        <td>
+          753
+          -
+          768
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](e._1).-&gt;[Int](average)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          152
+        </td>
+        <td>
+          745
+          -
+          769
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.MapOps.+
+        </td>
+        <td style="background: #AEF1AE">
+          map.+[Int](scala.Predef.ArrowAssoc[String](e._1).-&gt;[Int](average))
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          154
+        </td>
+        <td>
+          1117
+          -
+          1118
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          160
+        </td>
+        <td>
+          1124
+          -
+          1206
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.foreach
+        </td>
+        <td style="background: #AEF1AE">
+          map.foreach[Unit](((num: (String, laba3.Maps.User)) =&gt; if (num._2.name.indexOf(&quot;Adam&quot;).!=(-1))
+  a = a.+(1)
+else
+  ()))
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          155
+        </td>
+        <td>
+          1154
+          -
+          1189
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.!=
+        </td>
+        <td style="background: #AEF1AE">
+          num._2.name.indexOf(&quot;Adam&quot;).!=(-1)
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          158
+        </td>
+        <td>
+          1150
+          -
+          1150
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          159
+        </td>
+        <td>
+          1150
+          -
+          1150
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          157
+        </td>
+        <td>
+          1200
+          -
+          1206
+        </td>
+        <td>
+          Assign
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          a = a.+(1)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          156
+        </td>
+        <td>
+          1200
+          -
+          1206
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          a.+(1)
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          162
+        </td>
+        <td>
+          1467
+          -
+          1498
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOps.filter
+        </td>
+        <td style="background: #AEF1AE">
+          map.filter(((k: (String, laba3.Maps.User)) =&gt; k._2.age.&gt;=(35)))
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          161
+        </td>
+        <td>
+          1483
+          -
+          1497
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;=
+        </td>
+        <td style="background: #AEF1AE">
+          k._2.age.&gt;=(35)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

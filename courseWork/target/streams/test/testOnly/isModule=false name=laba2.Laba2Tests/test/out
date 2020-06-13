@@ -1,0 +1,10 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mLaba2Tests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- RecursiveData.scala testListIntEmpty[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- RecursiveData.scala testListIntHead[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- RecursiveFunc.scala testReverse[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- RecursiveFunc.scala testMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- RecursiveFunc.scala testAppend[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- RecursiveFunc.scala testFlatMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Compositions.scala testCompose[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Compositions.scala testMapFlatMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Compositions.scala testForComprehension[0m[0m

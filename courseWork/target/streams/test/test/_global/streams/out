@@ -1,8 +1,8 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(laba4.Laba4Tests, org.scalatest.tools.Framework$$anon$1@641887c6, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(laba1.Laba1Tests, org.scalatest.tools.Framework$$anon$1@641887c6, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(laba2.Laba2Tests, org.scalatest.tools.Framework$$anon$1@641887c6, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(laba3.Laba3Tests, org.scalatest.tools.Framework$$anon$1@641887c6, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 716 milliseconds.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(laba4.Laba4Tests, org.scalatest.tools.Framework$$anon$1@34e00868, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(laba1.Laba1Tests, org.scalatest.tools.Framework$$anon$1@34e00868, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(laba2.Laba2Tests, org.scalatest.tools.Framework$$anon$1@34e00868, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(laba3.Laba3Tests, org.scalatest.tools.Framework$$anon$1@34e00868, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 721 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 41[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 4, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 41, failed 0, canceled 0, ignored 0, pending 0[0m[0m

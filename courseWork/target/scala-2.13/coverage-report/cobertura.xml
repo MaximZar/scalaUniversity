@@ -1,0 +1,879 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage 
+line-rate="0.81" lines-valid="217" lines-covered="176" branches-valid="20" branches-covered="11" branch-rate="0.55" complexity="0" version="1.0" timestamp="1592056189921">
+    <sources>
+        <source>--source</source>
+        <source>C:/Users/Maxim/Desktop/Projects/scalaUniversity/courseWork/src/main/scala</source>
+        <source>C:/Users/Maxim/Desktop/Projects/scalaUniversity/courseWork/src/main/java</source>
+    </sources>
+    <packages>
+        <package name="laba1" line-rate="0.74" branch-rate="0.50" complexity="0">
+            <classes>
+                <class name="laba1.Functions" filename="laba1/Functions.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba1/Functions/testRectangleUc" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="38" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/Functions/testRectangleCurried" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="30" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/Functions/circleArea" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="17" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/Functions/testCircle" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="21" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/Functions/rectangleArea" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="34" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/Functions/rectangleAreaCurried" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="26" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="21" hits="1" branch="false"/>
+                        <line number="34" hits="1" branch="false"/>
+                        <line number="30" hits="1" branch="false"/>
+                        <line number="17" hits="1" branch="false"/>
+                        <line number="26" hits="1" branch="false"/>
+                        <line number="38" hits="1" branch="false"/>
+                    </lines>
+                </class>
+                <class name="laba1.HigherOrder" filename="laba1/HiOrder.scala" line-rate="0.80" branch-rate="0.50" complexity="0">
+                    <methods>
+                        <method name="laba1/HigherOrder/nTimes" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="12" hits="1" branch="false"/>
+                                <line number="12" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method 
+                        name="laba1/HigherOrder/testAnonymousNTimes" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="22" hits="1" branch="false"/>
+                                <line number="22" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method name="laba1/HigherOrder/&lt;none&gt;" signature="()V" line-rate="0.50" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="7" hits="0" branch="false"/>
+                                <line number="6" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/HigherOrder/testNTimes" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="15" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/HigherOrder/anon" signature="()V" line-rate="0.67" branch-rate="0.50" complexity="0">
+                            <lines>
+                                <line number="21" hits="1" branch="false"/>
+                                <line number="21" hits="0" branch="false"/>
+                                <line number="21" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="7" hits="0" branch="false"/>
+                        <line number="15" hits="1" branch="false"/>
+                        <line number="21" hits="1" branch="false"/>
+                        <line number="21" hits="0" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
+                        <line number="6" hits="1" branch="false"/>
+                        <line number="12" hits="1" branch="false"/>
+                        <line number="12" hits="1" branch="false"/>
+                        <line number="21" hits="1" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
+                    </lines>
+                </class>
+                <class name="laba1.PatternMatching" filename="laba1/Patterns.scala" line-rate="0.70" branch-rate="0.50" complexity="0">
+                    <methods>
+                        <method name="laba1/PatternMatching/isEven" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="79" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/PatternMatching/retWeight" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
+                            <lines>
+                                <line number="112" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                        <method 
+                        name="laba1/PatternMatching/testIntToString" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="58" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method name="laba1/PatternMatching/winsA" signature="()V" line-rate="0.64" branch-rate="0.50" complexity="0">
+                            <lines>
+                                <line number="96" hits="1" branch="false"/>
+                                <line number="97" hits="0" branch="false"/>
+                                <line number="95" hits="0" branch="false"/>
+                                <line number="96" hits="1" branch="false"/>
+                                <line number="97" hits="1" branch="false"/>
+                                <line number="97" hits="1" branch="false"/>
+                                <line number="95" hits="1" branch="false"/>
+                                <line number="96" hits="0" branch="false"/>
+                                <line number="97" hits="1" branch="false"/>
+                                <line number="95" hits="1" branch="false"/>
+                                <line number="96" hits="0" branch="false"/>
+                                <line number="96" hits="1" branch="false"/>
+                                <line number="97" hits="0" branch="false"/>
+                                <line number="97" hits="0" branch="false"/>
+                                <line number="95" hits="1" branch="false"/>
+                                <line number="96" hits="1" branch="false"/>
+                                <line number="95" hits="1" branch="false"/>
+                                <line number="97" hits="1" branch="false"/>
+                                <line number="96" hits="0" branch="false"/>
+                                <line number="95" hits="1" branch="false"/>
+                                <line number="97" hits="1" branch="false"/>
+                                <line number="95" hits="0" branch="false"/>
+                                <line number="97" hits="1" branch="false"/>
+                                <line number="96" hits="1" branch="false"/>
+                                <line number="97" hits="0" branch="false"/>
+                                <line number="95" hits="0" branch="false"/>
+                                <line number="96" hits="0" branch="false"/>
+                                <line number="97" hits="1" branch="false"/>
+                                <line number="95" hits="1" branch="false"/>
+                                <line number="95" hits="1" branch="false"/>
+                                <line number="96" hits="1" branch="false"/>
+                                <line number="96" hits="1" branch="false"/>
+                                <line number="95" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/PatternMatching/IsMaxAndMoritz" signature="()V" line-rate="0.40" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="67" hits="1" branch="false"/>
+                                <line number="70" hits="1" branch="false"/>
+                                <line number="66" hits="0" branch="false"/>
+                                <line number="69" hits="0" branch="false"/>
+                                <line number="68" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                        <method 
+                        name="laba1/PatternMatching/testExtractMammalWeight" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="117" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method name="laba1/PatternMatching/aTask" signature="()V" line-rate="0.75" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="50" hits="0" branch="false"/>
+                                <line number="53" hits="1" branch="false"/>
+                                <line number="52" hits="1" branch="false"/>
+                                <line number="51" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/PatternMatching/testWinsA" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="102" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method 
+                        name="laba1/PatternMatching/testIsMaxAndMoritz" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="76" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method name="laba1/PatternMatching/change" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="123" hits="1" branch="false"/>
+                                <line number="124" hits="1" branch="false"/>
+                                <line number="123" hits="1" branch="false"/>
+                                <line number="124" hits="1" branch="false"/>
+                                <line number="124" hits="1" branch="false"/>
+                                <line number="123" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/PatternMatching/testUpdateFood" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="131" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba1/PatternMatching/testIsEven" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="83" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="67" hits="1" branch="false"/>
+                        <line number="96" hits="1" branch="false"/>
+                        <line number="97" hits="0" branch="false"/>
+                        <line number="123" hits="1" branch="false"/>
+                        <line number="95" hits="0" branch="false"/>
+                        <line number="96" hits="1" branch="false"/>
+                        <line number="97" hits="1" branch="false"/>
+                        <line number="97" hits="1" branch="false"/>
+                        <line number="95" hits="1" branch="false"/>
+                        <line number="96" hits="0" branch="false"/>
+                        <line number="50" hits="0" branch="false"/>
+                        <line number="70" hits="1" branch="false"/>
+                        <line number="124" hits="1" branch="false"/>
+                        <line number="97" hits="1" branch="false"/>
+                        <line number="83" hits="1" branch="false"/>
+                        <line number="95" hits="1" branch="false"/>
+                        <line number="96" hits="0" branch="false"/>
+                        <line number="53" hits="1" branch="false"/>
+                        <line number="117" hits="1" branch="false"/>
+                        <line number="96" hits="1" branch="false"/>
+                        <line number="112" hits="0" branch="false"/>
+                        <line number="97" hits="0" branch="false"/>
+                        <line number="123" hits="1" branch="false"/>
+                        <line number="97" hits="0" branch="false"/>
+                        <line number="95" hits="1" branch="false"/>
+                        <line number="96" hits="1" branch="false"/>
+                        <line number="66" hits="0" branch="false"/>
+                        <line number="95" hits="1" branch="false"/>
+                        <line number="124" hits="1" branch="false"/>
+                        <line number="97" hits="1" branch="false"/>
+                        <line number="96" hits="0" branch="false"/>
+                        <line number="69" hits="0" branch="false"/>
+                        <line number="95" hits="1" branch="false"/>
+                        <line number="97" hits="1" branch="false"/>
+                        <line number="95" hits="0" branch="false"/>
+                        <line number="52" hits="1" branch="false"/>
+                        <line number="79" hits="1" branch="false"/>
+                        <line number="97" hits="1" branch="false"/>
+                        <line number="124" hits="1" branch="false"/>
+                        <line number="102" hits="1" branch="false"/>
+                        <line number="96" hits="1" branch="false"/>
+                        <line number="97" hits="0" branch="false"/>
+                        <line number="131" hits="1" branch="false"/>
+                        <line number="76" hits="1" branch="false"/>
+                        <line number="95" hits="0" branch="false"/>
+                        <line number="51" hits="1" branch="false"/>
+                        <line number="96" hits="0" branch="false"/>
+                        <line number="97" hits="1" branch="false"/>
+                        <line number="58" hits="1" branch="false"/>
+                        <line number="95" hits="1" branch="false"/>
+                        <line number="95" hits="1" branch="false"/>
+                        <line number="123" hits="1" branch="false"/>
+                        <line number="96" hits="1" branch="false"/>
+                        <line number="96" hits="1" branch="false"/>
+                        <line number="68" hits="0" branch="false"/>
+                        <line number="95" hits="0" branch="false"/>
+                    </lines>
+                </class>
+            </classes>
+        </package>
+        <package name="laba2" line-rate="0.86" branch-rate="1.00" complexity="0">
+            <classes>
+                <class name="laba2.None" filename="laba2/Compositions.scala" line-rate="0.00" branch-rate="0.00" complexity="0">
+                    <methods>
+                        <method name="laba2/None/map" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
+                            <lines>
+                                <line number="27" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/None/flatMap" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
+                            <lines>
+                                <line number="28" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="28" hits="0" branch="false"/>
+                        <line number="27" hits="0" branch="false"/>
+                    </lines>
+                </class>
+                <class 
+                name="laba2.RecursiveData" filename="laba2/RecursiveData.scala" line-rate="0.80" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba2/RecursiveData/b" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="23" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/RecursiveData/a" signature="()V" line-rate="0.50" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="12" hits="1" branch="false"/>
+                                <line number="13" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/RecursiveData/testListIntEmpty" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="17" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/RecursiveData/testListIntHead" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="27" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="12" hits="1" branch="false"/>
+                        <line number="23" hits="1" branch="false"/>
+                        <line number="17" hits="1" branch="false"/>
+                        <line number="13" hits="0" branch="false"/>
+                        <line number="27" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="laba2.Compositions" filename="laba2/Compositions.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method 
+                        name="laba2/Compositions/testForComprehension" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="58" hits="1" branch="false"/>
+                                <line number="59" hits="1" branch="false"/>
+                                <line number="56" hits="1" branch="false"/>
+                                <line number="57" hits="1" branch="false"/>
+                            </lines>
+</method>
+                        <method name="laba2/Compositions/testMapFlatMap" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="47" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/Compositions/testCompose" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="39" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="58" hits="1" branch="false"/>
+                        <line number="39" hits="1" branch="false"/>
+                        <line number="59" hits="1" branch="false"/>
+                        <line number="56" hits="1" branch="false"/>
+                        <line number="47" hits="1" branch="false"/>
+                        <line number="57" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="laba2.RecursiveFunctions" filename="laba2/RecursiveFunc.scala" line-rate="0.88" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba2/RecursiveFunctions/testFlatMap" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="86" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/RecursiveFunctions/testMap" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="53" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/RecursiveFunctions/loop" signature="()V" line-rate="0.57" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="15" hits="0" branch="false"/>
+                                <line number="31" hits="1" branch="false"/>
+                                <line number="15" hits="0" branch="false"/>
+                                <line number="31" hits="1" branch="false"/>
+                                <line number="33" hits="1" branch="false"/>
+                                <line number="33" hits="1" branch="false"/>
+                                <line number="19" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/RecursiveFunctions/testReverse" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="37" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/RecursiveFunctions/testAppend" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="66" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/RecursiveFunctions/append" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="62" hits="1" branch="false"/>
+                                <line number="62" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/RecursiveFunctions/loop2" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="47" hits="1" branch="false"/>
+                                <line number="79" hits="1" branch="false"/>
+                                <line number="49" hits="1" branch="false"/>
+                                <line number="81" hits="1" branch="false"/>
+                                <line number="47" hits="1" branch="false"/>
+                                <line number="78" hits="1" branch="false"/>
+                                <line number="49" hits="1" branch="false"/>
+                                <line number="79" hits="1" branch="false"/>
+                                <line number="81" hits="1" branch="false"/>
+                                <line number="46" hits="1" branch="false"/>
+                                <line number="47" hits="1" branch="false"/>
+                                <line number="79" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="15" hits="0" branch="false"/>
+                        <line number="47" hits="1" branch="false"/>
+                        <line number="79" hits="1" branch="false"/>
+                        <line number="31" hits="1" branch="false"/>
+                        <line number="49" hits="1" branch="false"/>
+                        <line number="81" hits="1" branch="false"/>
+                        <line number="37" hits="1" branch="false"/>
+                        <line number="62" hits="1" branch="false"/>
+                        <line number="62" hits="1" branch="false"/>
+                        <line number="86" hits="1" branch="false"/>
+                        <line number="47" hits="1" branch="false"/>
+                        <line number="78" hits="1" branch="false"/>
+                        <line number="15" hits="0" branch="false"/>
+                        <line number="31" hits="1" branch="false"/>
+                        <line number="49" hits="1" branch="false"/>
+                        <line number="79" hits="1" branch="false"/>
+                        <line number="33" hits="1" branch="false"/>
+                        <line number="33" hits="1" branch="false"/>
+                        <line number="53" hits="1" branch="false"/>
+                        <line number="81" hits="1" branch="false"/>
+                        <line number="46" hits="1" branch="false"/>
+                        <line number="66" hits="1" branch="false"/>
+                        <line number="19" hits="0" branch="false"/>
+                        <line number="47" hits="1" branch="false"/>
+                        <line number="79" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class name="laba2.Some" filename="laba2/Compositions.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba2/Some/flatMap" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="23" hits="1" branch="false"/>
+                                <line number="23" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba2/Some/map" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="22" hits="1" branch="false"/>
+                                <line number="22" hits="1" branch="false"/>
+                                <line number="22" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="23" hits="1" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
+                        <line number="23" hits="1" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
+                    </lines>
+                </class>
+            </classes>
+        </package>
+        <package name="laba3" line-rate="0.90" branch-rate="0.67" complexity="0">
+            <classes>
+                <class name="laba3.Maps" filename="laba3/Maps.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba3/Maps/testUnderaged" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="44" hits="1" branch="false"/>
+                                <line number="44" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Maps/testNumberFrodos" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="34" hits="1" branch="false"/>
+                                <line number="34" hits="1" branch="false"/>
+                                <line number="33" hits="1" branch="false"/>
+                                <line number="32" hits="1" branch="false"/>
+                                <line number="35" hits="1" branch="false"/>
+                                <line number="35" hits="1" branch="false"/>
+                                <line number="34" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Maps/testGroupUsers" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="18" hits="1" branch="false"/>
+                                <line number="21" hits="1" branch="false"/>
+                                <line number="14" hits="1" branch="false"/>
+                                <line number="23" hits="1" branch="false"/>
+                                <line number="16" hits="1" branch="false"/>
+                                <line number="17" hits="1" branch="false"/>
+                                <line number="19" hits="1" branch="false"/>
+                                <line number="21" hits="1" branch="false"/>
+                                <line number="15" hits="1" branch="false"/>
+                                <line number="22" hits="1" branch="false"/>
+                                <line number="23" hits="1" branch="false"/>
+                                <line number="15" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="18" hits="1" branch="false"/>
+                        <line number="34" hits="1" branch="false"/>
+                        <line number="34" hits="1" branch="false"/>
+                        <line number="21" hits="1" branch="false"/>
+                        <line number="14" hits="1" branch="false"/>
+                        <line number="23" hits="1" branch="false"/>
+                        <line number="33" hits="1" branch="false"/>
+                        <line number="16" hits="1" branch="false"/>
+                        <line number="32" hits="1" branch="false"/>
+                        <line number="17" hits="1" branch="false"/>
+                        <line number="35" hits="1" branch="false"/>
+                        <line number="19" hits="1" branch="false"/>
+                        <line number="35" hits="1" branch="false"/>
+                        <line number="21" hits="1" branch="false"/>
+                        <line number="34" hits="1" branch="false"/>
+                        <line number="15" hits="1" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
+                        <line number="44" hits="1" branch="false"/>
+                        <line number="23" hits="1" branch="false"/>
+                        <line number="15" hits="1" branch="false"/>
+                        <line number="44" hits="1" branch="false"/>
+                    </lines>
+                </class>
+                <class name="laba3.Strings" filename="laba3/Strings.scala" line-rate="0.89" branch-rate="0.50" complexity="0">
+                    <methods>
+                        <method name="laba3/Strings/testTakeTwo" signature="()V" line-rate="0.75" branch-rate="0.50" complexity="0">
+                            <lines>
+                                <line number="35" hits="1" branch="false"/>
+                                <line number="35" hits="0" branch="false"/>
+                                <line number="35" hits="1" branch="false"/>
+                                <line number="35" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Strings/testComputation" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="31" hits="1" branch="false"/>
+                                <line number="31" hits="1" branch="false"/>
+                                <line number="31" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Strings/testUppercase" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="11" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Strings/testInterpolations" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="18" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="31" hits="1" branch="false"/>
+                        <line number="35" hits="1" branch="false"/>
+                        <line number="35" hits="0" branch="false"/>
+                        <line number="11" hits="1" branch="false"/>
+                        <line number="31" hits="1" branch="false"/>
+                        <line number="31" hits="1" branch="false"/>
+                        <line number="35" hits="1" branch="false"/>
+                        <line number="35" hits="1" branch="false"/>
+                        <line number="18" hits="1" branch="false"/>
+                    </lines>
+                </class>
+                <class name="laba3.Sequence" filename="laba3/Sequence.scala" line-rate="0.88" branch-rate="0.50" complexity="0">
+                    <methods>
+                        <method name="laba3/Sequence/testLastElement" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="24" hits="1" branch="false"/>
+                                <line number="23" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Sequence/loop" signature="()V" line-rate="0.84" branch-rate="0.50" complexity="0">
+                            <lines>
+                                <line number="47" hits="0" branch="false"/>
+                                <line number="65" hits="1" branch="false"/>
+                                <line number="49" hits="1" branch="false"/>
+                                <line number="35" hits="1" branch="false"/>
+                                <line number="49" hits="1" branch="false"/>
+                                <line number="34" hits="1" branch="false"/>
+                                <line number="35" hits="1" branch="false"/>
+                                <line number="52" hits="1" branch="false"/>
+                                <line number="62" hits="1" branch="false"/>
+                                <line number="47" hits="1" branch="false"/>
+                                <line number="61" hits="1" branch="false"/>
+                                <line number="47" hits="0" branch="false"/>
+                                <line number="65" hits="1" branch="false"/>
+                                <line number="34" hits="1" branch="false"/>
+                                <line number="35" hits="1" branch="false"/>
+                                <line number="50" hits="0" branch="false"/>
+                                <line number="39" hits="1" branch="false"/>
+                                <line number="61" hits="1" branch="false"/>
+                                <line number="39" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Sequence/testFlatMap" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="72" hits="1" branch="false"/>
+                                <line number="72" hits="1" branch="false"/>
+                                <line number="72" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="47" hits="0" branch="false"/>
+                        <line number="65" hits="1" branch="false"/>
+                        <line number="24" hits="1" branch="false"/>
+                        <line number="49" hits="1" branch="false"/>
+                        <line number="72" hits="1" branch="false"/>
+                        <line number="35" hits="1" branch="false"/>
+                        <line number="72" hits="1" branch="false"/>
+                        <line number="49" hits="1" branch="false"/>
+                        <line number="34" hits="1" branch="false"/>
+                        <line number="35" hits="1" branch="false"/>
+                        <line number="52" hits="1" branch="false"/>
+                        <line number="62" hits="1" branch="false"/>
+                        <line number="23" hits="1" branch="false"/>
+                        <line number="47" hits="1" branch="false"/>
+                        <line number="61" hits="1" branch="false"/>
+                        <line number="47" hits="0" branch="false"/>
+                        <line number="65" hits="1" branch="false"/>
+                        <line number="34" hits="1" branch="false"/>
+                        <line number="72" hits="1" branch="false"/>
+                        <line number="35" hits="1" branch="false"/>
+                        <line number="50" hits="0" branch="false"/>
+                        <line number="39" hits="1" branch="false"/>
+                        <line number="61" hits="1" branch="false"/>
+                        <line number="39" hits="1" branch="false"/>
+                    </lines>
+                </class>
+                <class name="laba3.Adts" filename="laba3/Adts.scala" line-rate="0.85" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba3/Adts/testGetNth" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="46" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Adts/IsEven" signature="()V" line-rate="0.80" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="60" hits="1" branch="false"/>
+                                <line number="60" hits="1" branch="false"/>
+                                <line number="62" hits="0" branch="false"/>
+                                <line number="61" hits="1" branch="false"/>
+                                <line number="60" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Adts/GoodOldJava" signature="()V" line-rate="0.75" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="81" hits="1" branch="false"/>
+                                <line number="83" hits="0" branch="false"/>
+                                <line number="82" hits="1" branch="false"/>
+                                <line number="81" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Adts/Double" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="51" hits="1" branch="false"/>
+                                <line number="52" hits="1" branch="false"/>
+                                <line number="51" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Adts/GetNth" signature="()V" line-rate="0.60" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="41" hits="0" branch="false"/>
+                                <line number="39" hits="1" branch="false"/>
+                                <line number="40" hits="1" branch="false"/>
+                                <line number="41" hits="0" branch="false"/>
+                                <line number="39" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Adts/SafeDivide" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="71" hits="1" branch="false"/>
+                                <line number="70" hits="1" branch="false"/>
+                                <line number="70" hits="1" branch="false"/>
+                                <line number="72" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Adts/testDouble" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="56" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Adts/testSafeDivide" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="76" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Adts/testGoodOldJava" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="87" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba3/Adts/testIsEven" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="66" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="81" hits="1" branch="false"/>
+                        <line number="41" hits="0" branch="false"/>
+                        <line number="60" hits="1" branch="false"/>
+                        <line number="66" hits="1" branch="false"/>
+                        <line number="51" hits="1" branch="false"/>
+                        <line number="83" hits="0" branch="false"/>
+                        <line number="71" hits="1" branch="false"/>
+                        <line number="56" hits="1" branch="false"/>
+                        <line number="39" hits="1" branch="false"/>
+                        <line number="52" hits="1" branch="false"/>
+                        <line number="70" hits="1" branch="false"/>
+                        <line number="40" hits="1" branch="false"/>
+                        <line number="60" hits="1" branch="false"/>
+                        <line number="76" hits="1" branch="false"/>
+                        <line number="82" hits="1" branch="false"/>
+                        <line number="62" hits="0" branch="false"/>
+                        <line number="46" hits="1" branch="false"/>
+                        <line number="61" hits="1" branch="false"/>
+                        <line number="81" hits="1" branch="false"/>
+                        <line number="41" hits="0" branch="false"/>
+                        <line number="70" hits="1" branch="false"/>
+                        <line number="87" hits="1" branch="false"/>
+                        <line number="51" hits="1" branch="false"/>
+                        <line number="60" hits="1" branch="false"/>
+                        <line number="72" hits="1" branch="false"/>
+                        <line number="39" hits="1" branch="false"/>
+                    </lines>
+                </class>
+            </classes>
+        </package>
+        <package name="laba4" line-rate="0.64" branch-rate="1.00" complexity="0">
+            <classes>
+                <class 
+                name="laba4.Typeclasses.Smash" filename="laba4/Typeclasses.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba4/Smash/smash" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="31" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="31" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="laba4.Typeclasses.Smash.SmashLikeString" filename="laba4/Typeclasses.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba4/SmashLikeString/smash" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="44" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="44" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class name="laba4.Typeclasses" filename="laba4/Typeclasses.scala" line-rate="0.50" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba4/Typeclasses/testSmashString" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="56" hits="1" branch="false"/>
+                                <line number="56" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba4/Typeclasses/main" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
+                            <lines>
+                                <line number="59" hits="0" branch="false"/>
+                                <line number="61" hits="0" branch="false"/>
+                                <line number="62" hits="0" branch="false"/>
+                                <line number="62" hits="0" branch="false"/>
+                                <line number="59" hits="0" branch="false"/>
+                                <line number="60" hits="0" branch="false"/>
+                                <line number="60" hits="0" branch="false"/>
+                                <line number="61" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba4/Typeclasses/testSmashDouble" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="52" hits="1" branch="false"/>
+                                <line number="52" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="laba4/Typeclasses/testSmashInt" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="49" hits="1" branch="false"/>
+                                <line number="49" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                        <method 
+                        name="laba4/Typeclasses/testReversableString" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="22" hits="1" branch="false"/>
+                                <line number="22" hits="1" branch="false"/>
+                            </lines>
+</method>
+                    </methods>
+                    <lines>
+                        <line number="56" hits="1" branch="false"/>
+                        <line number="59" hits="0" branch="false"/>
+                        <line number="49" hits="1" branch="false"/>
+                        <line number="61" hits="0" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
+                        <line number="56" hits="1" branch="false"/>
+                        <line number="62" hits="0" branch="false"/>
+                        <line number="52" hits="1" branch="false"/>
+                        <line number="62" hits="0" branch="false"/>
+                        <line number="22" hits="1" branch="false"/>
+                        <line number="59" hits="0" branch="false"/>
+                        <line number="60" hits="0" branch="false"/>
+                        <line number="49" hits="1" branch="false"/>
+                        <line number="60" hits="0" branch="false"/>
+                        <line number="61" hits="0" branch="false"/>
+                        <line number="52" hits="1" branch="false"/>
+                    </lines>
+                </class>
+                <class 
+                name="laba4.Typeclasses.Smash.SmashLikeInt" filename="laba4/Typeclasses.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba4/SmashLikeInt/smash" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="36" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="36" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="laba4.Typeclasses.Reversable" filename="laba4/Typeclasses.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba4/Reversable/reverse" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="12" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="12" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="laba4.Typeclasses.Smash.SmashLikeDouble" filename="laba4/Typeclasses.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba4/SmashLikeDouble/smash" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="39" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="39" hits="1" branch="false"/>
+                    </lines>
+</class>
+                <class 
+                name="laba4.Typeclasses.Reversable.ReversableLikeString" filename="laba4/Typeclasses.scala" line-rate="1.00" branch-rate="1.00" complexity="0">
+                    <methods>
+                        <method name="laba4/ReversableLikeString/reverse" signature="()V" line-rate="1.00" branch-rate="1.00" complexity="0">
+                            <lines>
+                                <line number="16" hits="1" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="16" hits="1" branch="false"/>
+                    </lines>
+</class>
+            </classes>
+        </package>
+    </packages>
+</coverage>

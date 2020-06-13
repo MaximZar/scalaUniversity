@@ -1,0 +1,569 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          laba4\Typeclasses.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package laba4
+</span>2 <span style=''>
+</span>3 <span style=''>object Typeclasses {
+</span>4 <span style=''>
+</span>5 <span style=''>  // a) Определите тайп-класс Reversable, который представляет в обратном порядке значения.
+</span>6 <span style=''>
+</span>7 <span style=''>  trait Reversable[T] {
+</span>8 <span style=''>    def reverse(a: T): T
+</span>9 <span style=''>  }
+</span>10 <span style=''>
+</span>11 <span style=''>  object Reversable {
+</span>12 <span style=''>    def reverse[T: Reversable](a: T): T = </span><span style='background: #AEF1AE'>implicitly[Reversable[T]].reverse(a)</span><span style=''>
+</span>13 <span style=''>
+</span>14 <span style=''>    // b) Реализуйте функцию Reverse для String.
+</span>15 <span style=''>    implicit object ReversableLikeString extends Reversable[String] {
+</span>16 <span style=''>      def reverse(str: String): String = </span><span style='background: #AEF1AE'>str.reverse</span><span style=''>
+</span>17 <span style=''>    }
+</span>18 <span style=''>  }
+</span>19 <span style=''>
+</span>20 <span style=''>
+</span>21 <span style=''>  // примените тайп-класс-решение из пункта (a) здесь
+</span>22 <span style=''>  def testReversableString(str: String): String = </span><span style='background: #AEF1AE'>Reversable.reverse(str)</span><span style=''>
+</span>23 <span style=''>
+</span>24 <span style=''>  // c) Определите тайп-класс Smash таким образом чтобы в нем была функция smash, которая выполняет операцию со значениями одного типа.
+</span>25 <span style=''>
+</span>26 <span style=''>  trait Smash[T] {
+</span>27 <span style=''>    def smash(a: T, b: T): T
+</span>28 <span style=''>  }
+</span>29 <span style=''>
+</span>30 <span style=''>  object Smash {
+</span>31 <span style=''>    def smash[T : Smash](a: T, b: T): T = </span><span style='background: #AEF1AE'>implicitly[Smash[T]].smash(a, b)</span><span style=''>
+</span>32 <span style=''>
+</span>33 <span style=''>    // d) Реализуйте  функции Smash для типа Int и Double.
+</span>34 <span style=''>    //    Используйте сложение для типа Int у умножение для типа Double.
+</span>35 <span style=''>    implicit object SmashLikeInt extends Smash[Int] {
+</span>36 <span style=''>      def smash(a: Int, b: Int): Int = </span><span style='background: #AEF1AE'>a + b</span><span style=''>
+</span>37 <span style=''>    }
+</span>38 <span style=''>    implicit object SmashLikeDouble extends Smash[Double] {
+</span>39 <span style=''>      def smash(a: Double, b: Double): Double = </span><span style='background: #AEF1AE'>a * b</span><span style=''>
+</span>40 <span style=''>    }
+</span>41 <span style=''>    
+</span>42 <span style=''>    // e) Реализуйте функцию Smash для типа String. Необходимо выполнить конкатенацию строк, которые будут получены в качестве параметра. 
+</span>43 <span style=''>    implicit object SmashLikeString extends Smash[String] {
+</span>44 <span style=''>      def smash(a: String, b: String): String = </span><span style='background: #AEF1AE'>a + b</span><span style=''>
+</span>45 <span style=''>    }
+</span>46 <span style=''>  }
+</span>47 <span style=''>
+</span>48 <span style=''>  // примените тайп-класс-решение из пункта (d) здесь
+</span>49 <span style=''>  def testSmashInt(a: Int, b: Int): Int = </span><span style='background: #AEF1AE'>Smash.smash(a, b)</span><span style=''>
+</span>50 <span style=''>
+</span>51 <span style=''>  // примените тайп-класс-решение из пункта (d) здесь
+</span>52 <span style=''>  def testSmashDouble(a: Double, b: Double): Double = </span><span style='background: #AEF1AE'>Smash.smash(a, b)</span><span style=''>
+</span>53 <span style=''>
+</span>54 <span style=''>
+</span>55 <span style=''>  // примените тайп-класс-решение из пункта (d) здесь
+</span>56 <span style=''>  def testSmashString(a: String, b: String): String = </span><span style='background: #AEF1AE'>Smash.smash(a, b)</span><span style=''>
+</span>57 <span style=''>
+</span>58 <span style=''>  def main(args: Array[String]): Unit = {
+</span>59 <span style=''>    </span><span style='background: #F0ADAD'>println(testReversableString(&quot;abc&quot;))</span><span style=''> // cba
+</span>60 <span style=''>    </span><span style='background: #F0ADAD'>println(testSmashInt(3, 4))</span><span style=''> // 7
+</span>61 <span style=''>    </span><span style='background: #F0ADAD'>println(testSmashDouble(3.0, 4.0))</span><span style=''> // 12
+</span>62 <span style=''>    </span><span style='background: #F0ADAD'>println(testSmashString(&quot;ab&quot;, &quot;cd&quot;))</span><span style=''> // abcd
+</span>63 <span style=''>  }
+</span>64 <span style=''>}
+</span>65 <span style=''>
+</span>66 <span style=''>// Реализуйте тестовые функции с выводом на экран проверки разработанных функций.
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          196
+        </td>
+        <td>
+          259
+          -
+          295
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba4.Typeclasses.Reversable.reverse
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.implicitly[laba4.Typeclasses.Reversable[T]](evidence$1).reverse(a)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          197
+        </td>
+        <td>
+          461
+          -
+          472
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.StringOps.reverse
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(str).reverse
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          199
+        </td>
+        <td>
+          595
+          -
+          618
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          laba4.Typeclasses.Reversable.reverse
+        </td>
+        <td style="background: #AEF1AE">
+          Typeclasses.this.Reversable.reverse[String](str)(Typeclasses.this.Reversable.ReversableLikeString)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          198
+        </td>
+        <td>
+          613
+          -
+          613
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba4.Typeclasses.Reversable.ReversableLikeString
+        </td>
+        <td style="background: #AEF1AE">
+          Typeclasses.this.Reversable.ReversableLikeString
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          200
+        </td>
+        <td>
+          878
+          -
+          910
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba4.Typeclasses.Smash.smash
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.implicitly[laba4.Typeclasses.Smash[T]](evidence$2).smash(a, b)
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          201
+        </td>
+        <td>
+          1142
+          -
+          1147
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          a.+(b)
+        </td>
+      </tr><tr>
+        <td>
+          39
+        </td>
+        <td>
+          202
+        </td>
+        <td>
+          1265
+          -
+          1270
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Double.*
+        </td>
+        <td style="background: #AEF1AE">
+          a.*(b)
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          203
+        </td>
+        <td>
+          1534
+          -
+          1539
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #AEF1AE">
+          a.+(b)
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          205
+        </td>
+        <td>
+          1652
+          -
+          1669
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          laba4.Typeclasses.Smash.smash
+        </td>
+        <td style="background: #AEF1AE">
+          Typeclasses.this.Smash.smash[Int](a, b)(Typeclasses.this.Smash.SmashLikeInt)
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          204
+        </td>
+        <td>
+          1663
+          -
+          1663
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba4.Typeclasses.Smash.SmashLikeInt
+        </td>
+        <td style="background: #AEF1AE">
+          Typeclasses.this.Smash.SmashLikeInt
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          207
+        </td>
+        <td>
+          1782
+          -
+          1799
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          laba4.Typeclasses.Smash.smash
+        </td>
+        <td style="background: #AEF1AE">
+          Typeclasses.this.Smash.smash[Double](a, b)(Typeclasses.this.Smash.SmashLikeDouble)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          206
+        </td>
+        <td>
+          1793
+          -
+          1793
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba4.Typeclasses.Smash.SmashLikeDouble
+        </td>
+        <td style="background: #AEF1AE">
+          Typeclasses.this.Smash.SmashLikeDouble
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          209
+        </td>
+        <td>
+          1914
+          -
+          1931
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          laba4.Typeclasses.Smash.smash
+        </td>
+        <td style="background: #AEF1AE">
+          Typeclasses.this.Smash.smash[String](a, b)(Typeclasses.this.Smash.SmashLikeString)
+        </td>
+      </tr><tr>
+        <td>
+          56
+        </td>
+        <td>
+          208
+        </td>
+        <td>
+          1925
+          -
+          1925
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          laba4.Typeclasses.Smash.SmashLikeString
+        </td>
+        <td style="background: #AEF1AE">
+          Typeclasses.this.Smash.SmashLikeString
+        </td>
+      </tr><tr>
+        <td>
+          59
+        </td>
+        <td>
+          211
+        </td>
+        <td>
+          1982
+          -
+          2018
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(Typeclasses.this.testReversableString(&quot;abc&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          59
+        </td>
+        <td>
+          210
+        </td>
+        <td>
+          1990
+          -
+          2017
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba4.Typeclasses.testReversableString
+        </td>
+        <td style="background: #F0ADAD">
+          Typeclasses.this.testReversableString(&quot;abc&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          60
+        </td>
+        <td>
+          213
+        </td>
+        <td>
+          2031
+          -
+          2058
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(Typeclasses.this.testSmashInt(3, 4))
+        </td>
+      </tr><tr>
+        <td>
+          60
+        </td>
+        <td>
+          212
+        </td>
+        <td>
+          2039
+          -
+          2057
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba4.Typeclasses.testSmashInt
+        </td>
+        <td style="background: #F0ADAD">
+          Typeclasses.this.testSmashInt(3, 4)
+        </td>
+      </tr><tr>
+        <td>
+          61
+        </td>
+        <td>
+          214
+        </td>
+        <td>
+          2077
+          -
+          2102
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba4.Typeclasses.testSmashDouble
+        </td>
+        <td style="background: #F0ADAD">
+          Typeclasses.this.testSmashDouble(3.0, 4.0)
+        </td>
+      </tr><tr>
+        <td>
+          61
+        </td>
+        <td>
+          215
+        </td>
+        <td>
+          2069
+          -
+          2103
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(Typeclasses.this.testSmashDouble(3.0, 4.0))
+        </td>
+      </tr><tr>
+        <td>
+          62
+        </td>
+        <td>
+          217
+        </td>
+        <td>
+          2115
+          -
+          2151
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(Typeclasses.this.testSmashString(&quot;ab&quot;, &quot;cd&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          62
+        </td>
+        <td>
+          216
+        </td>
+        <td>
+          2123
+          -
+          2150
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          laba4.Typeclasses.testSmashString
+        </td>
+        <td style="background: #F0ADAD">
+          Typeclasses.this.testSmashString(&quot;ab&quot;, &quot;cd&quot;)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

@@ -86,11 +86,19 @@ class Laba3Tests extends FunSuite {
         val testGetNth = Adts.testGetNth(List(1, 2, 3, 4), 2)
         val result = Option(3)
         assert(testGetNth == result)
+        
+        val testGetNth2 = Adts.testGetNth(Nil, 2)
+        val result2 = null
+        assert(testGetNth2 == result2)
     }
     test("Adts.scala testDouble") {
         val testDouble = Adts.testDouble(Option(5))
         val result = Option(10)
         assert(testDouble == result)
+
+        val testDouble2 = Adts.testDouble(None)
+        val result2 = null
+        assert(testDouble2 == result2)
     }
     test("Adts.scala testIsEven") {
         val testIsEven = Adts.testIsEven(5)
@@ -101,6 +109,10 @@ class Laba3Tests extends FunSuite {
         val testSafeDivide = Adts.testSafeDivide(10, 2)
         val result = Right(5)
         assert(testSafeDivide == result)
+        
+        val testSafeDivide2 = Adts.testSafeDivide(9, 0)
+        val result2 = Left("Вы не можете делить на ноль")
+        assert(testSafeDivide2 == result2)
     }
     test("Adts.scala testGoodOldJava") {
         val string = "test"
