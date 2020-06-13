@@ -68,7 +68,7 @@ object Sequence {
   /* e) Реализуйте flatMap используя foldLeft.
    *
    */
-  def testFlatMap[A, B](seq: Seq[A])(f: A => Seq[B]): Seq[B] = {
-    seq.foldLeft[Seq[B]](Nil)((a, next) => f(next).++: (a))
-  }
+  def testFlatMap[A, B](seq: Seq[A])(f: A => Seq[B]): Seq[B] =
+    seq.foldLeft[Seq[B]](Seq())((acc, elem) => acc ++: f(elem) )
+
 }

@@ -13,9 +13,13 @@ object Maps {
   def testGroupUsers(users: Seq[User]): Map[String, Int] = {
     var map: Map[String, Int] = Map()
     var name = users.groupBy(_.name)
+    var average: Int = 0
+    for (e <- users) {
+      val age: Int = e.age
+      average = average + age
+    }
+    average = average / name.size
     for (e <- name) {
-      var average = e._2.toBuffer.foldLeft[Int](0)((a, next) => a + next.age) /
-      e._2.toBuffer.size
       map += (e._1 -> average)
     }
     map
