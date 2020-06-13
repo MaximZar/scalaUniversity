@@ -1,6 +1,7 @@
 package laba3
 
 import org.scalatest.FunSuite
+import scala.util.{Failure, Success, Try}
 
 class Laba3Tests extends FunSuite {
 // String.scala
@@ -48,10 +49,64 @@ class Laba3Tests extends FunSuite {
         assert(testPalindrom == result)
     }
     test("Sequence.scala testFlatMap") {
-        val seq = Seq((1,2),(3,4))
-        val func = ((a: Int, b: Int)) => Seq(a, b) //((Int, Int)) => Seq[?]
-        val result = Seq(1,2,3,4)
+        val seq = Seq(1,(5, 2),3,4)
+        val func = (value: Any) => Seq(Seq(value))
         val testFlatMap = Sequence.testFlatMap(seq)(func)
+        val result = Seq(Seq(1), Seq((5, 2)), Seq(3), Seq(4))
         assert(testFlatMap == result)
+    }
+
+
+// Maps.scala
+    test("Maps.scala testGroupUsers") {
+        val users = Seq(Maps.User("Maxim", 19), Maps.User("Oleg", 18), Maps.User("Bashar", 20))
+        val testGroupUsers = Maps.testGroupUsers(users)
+        val result = Map("Bashar" -> 19, "Maxim" -> 19, "Oleg" -> 19)
+        assert(testGroupUsers == result)
+    }
+    test("Maps.scala testNumberFrodos") {
+        val users = Map("1" -> Maps.User("Adamas", 20),
+            "2" -> Maps.User("Maxim", 19), "3" -> Maps.User("Adam", 20))
+        val testNumberFrodos = Maps.testNumberFrodos(users)
+        val result = 2
+        assert(testNumberFrodos == result)
+    }
+    test("Maps.scala testUnderaged") {
+        val users = Map("1" -> Maps.User("Oleg", 36),
+            "2" -> Maps.User("Maxim", 19), "3" -> Maps.User("Bashar", 40))
+        val testUnderaged = Maps.testUnderaged(users)
+        val result = Map("1" -> Maps.User("Oleg", 36),
+            "3" -> Maps.User("Bashar", 40))
+        assert(testUnderaged == result)
+    }
+
+
+// Adts.scala
+    test("Adts.scala testGetNth") {
+        val testGetNth = Adts.testGetNth(List(1, 2, 3, 4), 2)
+        val result = Option(3)
+        assert(testGetNth == result)
+    }
+    test("Adts.scala testDouble") {
+        val testDouble = Adts.testDouble(Option(5))
+        val result = Option(10)
+        assert(testDouble == result)
+    }
+    test("Adts.scala testIsEven") {
+        val testIsEven = Adts.testIsEven(5)
+        val result = Left("Нечетное число")
+        assert(testIsEven == result)
+    }
+    test("Adts.scala testSafeDivide") {
+        val testSafeDivide = Adts.testSafeDivide(10, 2)
+        val result = Right(5)
+        assert(testSafeDivide == result)
+    }
+    test("Adts.scala testGoodOldJava") {
+        val string = "test"
+        val func = (s:String) => s.size
+        val result = Success(4)
+        val goodOldJava = Adts.testGoodOldJava(func, string)
+        assert(goodOldJava == result)
     }
 }
