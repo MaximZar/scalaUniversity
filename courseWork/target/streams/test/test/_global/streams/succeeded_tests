@@ -1,16 +1,17 @@
 #Successful Tests
-#Fri Jun 12 18:13:17 MSK 2020
+#Sat Jun 13 15:42:59 MSK 2020
 laba2.RecursiveDataTests=1591959033638
-laba1.Laba1Tests=1591974797771
+laba1.Laba1Tests=1592052179182
 laba1.PatternsTests=1591956861721
 laba3.MapsTests=1591967688188
-laba2.Laba2Tests=1591974797959
+laba2.Laba2Tests=1592052178894
 laba1.HiOrderTests=1591956861847
-laba3.Laba3Tests=1591974797726
+laba3.Laba3Tests=1592052179193
 laba3.SequenceTests=1591967688236
 laba1.FunctionsTests=1591956018852
 laba3.AdtsTests=1591967688143
 laba2.RecursiveFuncTests=1591959033217
-laba4.TypeclassesTests=1591974797722
+laba4.Laba4Tests=1592052179010
+laba4.TypeclassesTests=1592047530973
 laba3.StringsTests=1591967688221
 laba2.CompositionsTests=1591959033273

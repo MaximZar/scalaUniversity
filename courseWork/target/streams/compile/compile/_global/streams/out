@@ -1,6 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Maxim\Desktop\Projects\scalaUniversity\courseWork\src\main\scala\laba3\Sequence.scala:23:15: scrutinee is incompatible with pattern type;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : C with scala.collection.SeqOps[A,CC,C][0m
-[0m[[0m[31merror[0m] [0m[0m required: Int[0m
-[0m[[0m[31merror[0m] [0m[0m    case head +: tail => testLastElement(tail)[0m
-[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Maxim\Desktop\Projects\scalaUniversity\courseWork\src\main\scala\laba4\Typeclasses.scala:31:73: too many arguments (2) for method smash: (a: T): T[0m
+[0m[[0m[31merror[0m] [0m[0m    def smash[T : Smash](a: T, b: T): T = implicitly[Smash[T]].smash(a, b)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                        ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
