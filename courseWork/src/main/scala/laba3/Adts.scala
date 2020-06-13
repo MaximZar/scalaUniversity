@@ -47,12 +47,10 @@ object Adts {
 
   // b) Напишите функцию, увеличивающую число в два раза.
 
-  def Double(n: Option[Int]): Option[Int] = {
-    Option(1) match {
+  def Double(n: Option[Int]): Option[Int] = n match {
       case Some(a) => Option(a * 2)
       case None => null
     }
-  }
 
   // примените функцию из пункта (b) здесь, не изменяйте сигнатуру
   def testDouble(n: Option[Int]): Option[Int] = Double(n)
